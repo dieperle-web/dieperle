@@ -1,0 +1,810 @@
+/*BUTTON FOR INFO*/
+.mehrInfo{
+    float: inline-start;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  
+  .hiddenInfo {
+    display: none;
+    position: fixed; /* Use fixed positioning to keep it in place relative to the viewport */
+    left: 50%;       /* Center horizontally */
+    top: 50%;        /* Center vertically */
+    width: 50vw;     /* 50% of the viewport width */
+    padding: 10px;   /* Optional: add padding for better readability */
+    border: solid 3px;
+    background-color: white;
+    color: black;
+    transform: translate(-50%, -50%); /* Adjust position to center the element */
+    z-index: 1000;   /* Ensures the div stays on top of other elements */
+  }
+  
+  
+  button:hover {
+    color: #001F3F;
+    background-color: #fff;
+  }
+  button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid rgb(58, 61, 71);;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+  }
+  
+  /* MAIN STYLE */
+  .styles{
+    border-bottom: solid 2px;
+    border-color: black;
+  }
+  .pickDerby {
+    background-color: beige;
+  }
+  .menu{
+    width: 25.5%;
+    background-color: rgb(42, 53, 59);
+  }
+  .title{
+    margin-left: 1.5%;
+    width: 100%;
+  }
+  .title a{
+    text-decoration: none;
+    color: blanchedalmond;
+    font-size: 10px;
+  }
+  .title h2{
+    text-decoration: underline;
+  }
+  .leer{
+    float: left;
+    width: 1.5%;
+  }
+  .content{
+    float: left;
+    width:71%;
+  }
+  .content h1{
+    color: rgb(58, 61, 71);
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration:underline overline;
+  }
+  .content h2{
+    font-size: 15px;
+  }
+  .chapter{
+    width: 100%;
+    border-bottom: solid 1px;
+  }
+  
+  /* First part*/
+  .farbe{
+    width: 100%;
+  }
+  .griffe{
+    width: 100%;
+  }
+  .fuesgestelle{
+    width: 100%;
+  }
+  .imageFarbe{
+    width: 20%;
+    height: 180px;
+  }
+  .imagesize1{
+    width: 90px;
+    height: 52px;
+  }
+  .imageGriff{
+    width:20%;
+  }
+  .imageFues{
+    width: 30%;
+  }
+  .imageFues1{
+    width: 90px;
+    height: 60px;
+  }
+  .imageFues2{
+    width: 110px;
+    height: 80px;
+  }
+  .imageFues3{
+    width: 110px;
+    height: 180px;
+  }
+  
+  /* Second part*/
+  .fronten{
+    width: 100%;
+  }
+  .imageFronten{
+    width: 20%;
+  }
+  .imagefronten{
+    width: 90px;
+    height: 52px;
+  }
+
+  .hochschraenke{
+    width: 100%;
+  }
+  .imageHsch{
+    width: 20%;
+  }
+  .imagehsch{
+    width: 100px;
+    height: 285px;
+  }
+  .imagehsch1{
+    width: 70px;
+    height: 285px;
+  }
+  .imagehsch2{
+    width: 110px;
+    height: 285px;
+  }
+  .halbhochschrank{
+    width: 100%;
+  }
+  .imageHalbhochschrank{
+    width: 20%;
+  }
+  .imagehalbhochschrank{
+    width: 100px;
+    height: 205px;
+  }
+  .jalousien{
+    width: 100%;
+  }
+  .imageJalousien{
+    width: 20%;
+  }
+  .imagejalousien{
+    width: 105px;
+    height: 90px;
+  }
+  .regale{
+    width: 100%;
+  }
+  .imageRegale{
+    width: 20%;
+    height: 250px;
+  }
+  .imageregale1{
+    width: 85px;
+    height: 145px;
+  }
+  .imageregale2{
+    width: 135px;
+    height: 90px;
+  }
+  .imageregale3{
+    width: 125px;
+    height: 130px;
+  }
+  .imageregale4{
+    width: 145px;
+    height: 70px;
+  }
+  .imageregale5{
+    width: 135px;
+    height: 100px;
+  }
+  .imageregale6{
+    width: 95px;
+    height: 70px;
+  }
+  .imageregale7{
+    width: 125px;
+    height: 75px;
+  }
+  .imageregale8{
+    width: 145px;
+    height: 60px;
+  }
+  .imageregale9{
+    width: 135px;
+    height: 60px;
+  }
+  .imageregale10{
+    width: 135px;
+    height: 55px;
+  }
+  .abdeckplatten{
+    width: 100%;
+  }
+  .imageAbdeckplatten{
+    width: 20%;
+    height: 250px;
+  }
+  .imageabdeckplatten1{
+    width: 75px;
+    height: 30px;
+  }
+  .imageabdeckplatten2{
+    width: 135px;
+    height: 45px;
+  }
+  .imageabdeckplatten3{
+    width: 145px;
+    height: 90px;
+  }
+  .imageabdeckplatten4{
+    width: 145px;
+    height: 70px;
+  }
+  .imageabdeckplatten5{
+    width: 125px;
+    height: 80px;
+  }
+  .imageabdeckplatten6{
+    width: 150px;
+    height: 75px;
+  }
+
+  .oberschraenke{
+    width: 100%;
+  }
+  .imageOberschraenke{
+    width: 20%;
+    height: 250px;
+  }
+  .imageoberschraenke1{
+    width: 80px;
+    height: 150px;
+  }
+  .imageoberschraenke2{
+    width: 80px;
+    height: 130px;
+  }
+  .imageoberschraenke3{
+    width: 80px;
+    height: 60px;
+  }
+  .imageoberschraenke4{
+    width: 140px;
+    height: 60px;
+  }
+  .imageoberschraenke5{
+    width: 140px;
+    height: 50px;
+  }
+  .waschmaschinenschraenke{
+    width: 100%;
+  }
+  .imageWaschmaschinenschraenke{
+    width: 20%;
+  }
+  .imagewaschmaschinenschraenke{
+    width: 125px;
+    height: 285px;
+  }
+  .imagewaschmaschinenschraenke1{
+    width: 125px;
+    height: 170px;
+  }
+  .imagewaschmaschinenschraenke2{
+    width: 145px;
+    height: 90px;
+  }
+  .konsolenplaten{
+    width: 100%;
+  }
+  .imageKonsolenplatten{
+    width: 20%;
+    height: 200px;
+  }
+  .imagekonsolenplatten{
+    width: 105px;
+    height: 45px;
+  }
+  .imagekonsolenplatten1{
+    width: 115px;
+    height: 45px;
+  }
+  .imagekonsolenplatten2{
+    width: 125px;
+    height: 45px;
+  }
+  .imagekonsolenplatten3{
+    width: 135px;
+    height: 45px;
+  }
+  .imagekonsolenplatten4{
+    width: 145px;
+    height: 45px;
+  }
+  .imagekonsolenplatten5{
+    width: 155px;
+    height: 45px;
+  }
+  .imagekonsolenplatten6{
+    width: 165px;
+    height: 45px;
+  }
+  .imagekonsolenplatten7{
+    width: 175px;
+    height: 45px;
+  }
+  .imagekonsolenplatten8{
+    width: 185px;
+    height: 45px;
+  }
+  .imagekonsolenplatten9{
+    width: 195px;
+    height: 45px;
+  }
+  .imagekonsolenplatten10{
+    width: 205px;
+    height: 45px;
+  }
+  .aufsatzschalen{
+    width: 100%;
+  }
+  .imageAufsatzschalen{
+    width: 20%;
+    height: 250px;
+  }
+  .imageaufsatzschalen{
+    width: 125px;
+    height: 60px;
+  }
+  .imageaufsatzschalen1{
+    width: 145px;
+    height: 60px;
+  }
+  .imageaufsatzschalen2{
+    width: 105px;
+    height: 90px;
+  }
+  .imageaufsatzschalen3{
+    width: 95px;
+    height: 80px;
+  }
+  .imageaufsatzschalen4{
+    width: 100px;
+    height: 70px;
+  }
+  .imageaufsatzschalen5{
+    width: 130px;
+    height: 120px;
+  }
+  .waschtischunterschraenke{
+    width: 100%;
+  }
+  .imageWaschtischunterschraenke{
+    width: 20%;
+    height: 270px
+  }
+  .imagewaschtischunterschraenke{
+    width: 155px;
+    height: 110px;
+  }
+  .imagewaschtischunterschraenke1{
+    width: 155px;
+    height: 55px;
+  }
+  .imagewaschtischunterschraenke2{
+    width: 155px;
+    height: 65px;
+  }
+  .imagewaschtischunterschraenke3{
+    width: 155px;
+    height: 75px;
+  }
+  .imagewaschtischunterschraenke4{
+    width: 105px;
+    height: 155px;
+  }
+  .imagewaschtischunterschraenke5{
+    width: 125px;
+    height: 155px;
+  }
+  .imageWaschtischunterschraenke1{
+    width: 30%;
+    height: 270px
+  }
+  .imagewaschtischunterschraenke6{
+    width: 265px;
+    height: 155px;
+  }
+  .spiegelschraenke{
+    width: 100%;
+  }
+  .spiegelInfo {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  .spiegelInfo h3 {
+    margin: 0;
+  }
+  .spiegelInfo .mehrInfo {
+    margin-left: 10px; /* Adjust spacing between h3 and button as needed */
+  }
+  .spiegelBild {
+    width: 20%;
+    margin-left: 20px; /* Add space between the info button and the image */
+  }
+  .spiegelbild {
+    width: 80px;
+    height: 70px;
+  }
+  .spiegelbild{
+    width: 80px;
+    height: 70px;
+  }
+  .imageSpiegelschraenke{
+    width: 20%;
+    height: 200px;
+  }
+  .imageSpiegelschraenke1{
+    width: 25%;
+    height: 200px;
+  }
+  .imagespiegelschraenke{
+    width: 80px;
+    height: 90px;
+  }
+  .imagespiegelschraenke1{
+    width: 95px;
+    height: 90px;
+  }
+  .imagespiegelschraenke2{
+    width: 110px;
+    height: 90px;
+  }
+  .imagespiegelschraenke3{
+    width: 140px;
+    height: 90px;
+  }
+  .imagespiegelschraenke4{
+    width: 170px;
+    height: 90px;
+  }
+  .imagespiegelschraenke5{
+    width: 185px;
+    height: 90px;
+  }
+  .imagespiegelschraenke6{
+    width: 200px;
+    height: 90px;
+  }
+  .imagespiegelschraenke7{
+    width: 230px;
+    height: 90px;
+  }
+  .imagespiegelschraenke8{
+    width: 260px;
+    height: 90px;
+  }
+
+
+  .unterschraenke{
+    width: 100%;
+  }
+  .imageUnterschraenke{
+    width: 20%;
+  }
+  .imageunterschraenke{
+    width: 105px;
+    height: 90px;
+  }
+
+  .spiegelzub{
+    width: 100%;
+  }
+  .imageSpiegelzub{
+    width: 25%;
+  }
+  .imagespiegelzub{
+    width: 150px;
+    height: 110px;
+  }
+
+  .mineralguss{
+    width: 100%;
+  }
+  .imageMineralguss{
+    width: 25%;
+  }
+  .imagemineralguss{
+    width: 150px;
+    height: 110px;
+  }
+
+  .glas{
+    width: 100%;
+  }
+  .imageGlas{
+    width: 25%;
+  }
+  .imageglas{
+    width: 150px;
+    height: 110px;
+  }
+
+  .wtuMKG {
+    width: 100%;
+}
+
+.imageWtuMKG {
+    width: 25%;
+}
+
+.imageWTuMKG {
+    width: 150px;
+    height: 110px;
+}
+
+.handwaschbecken {
+    width: 100%;
+}
+
+.imageHandwaschbecken {
+    width: 25%;
+}
+
+.imagehandwaschbecken {
+    width: 150px;
+}
+
+.gebogen {
+  width: 100%;
+}
+
+.imageGebogen {
+  width: 25%;
+}
+
+.imagegebogen {
+  width: 150px;
+  height: 110px;
+}
+
+.barrierefrei {
+  width: 100%;
+}
+
+.imageBarrierefrei {
+  width: 25%;
+}
+
+.imagebarrierefrei {
+  width: 150px;
+  height: 110px;
+}
+
+.unterfahrbar {
+  width: 100%;
+}
+
+.imageUnterfahrbar {
+  width: 25%;
+}
+
+.imageunterfahrbar {
+  width: 150px;
+  height: 110px;
+}
+
+.waschtischegebogen {
+  width: 100%;
+}
+
+.imageWaschtischegebogen {
+  width: 25%;
+}
+
+.imagewaschtischegebogen {
+  width: 150px;
+  height: 110px;
+}
+
+.zubehoer {
+  width: 100%;
+}
+
+.imageZubehoer {
+  width: 25%;
+}
+
+.imagezubehoer {
+  width: 150px;
+  height: 110px;
+}
+
+
+
+
+
+
+
+  .moebelwaschtische{
+    width: 100%;
+  }
+  .imageMoebelwaschtische{
+    width: 25%;
+  }
+  .imagemoebelwaschtische{
+    width: 150px;
+    height:110px;
+  }
+  .wtsch500mmH{
+    width: 100%;
+  }
+  .imageWtsch500mmH{
+    width: 25%;
+  }
+  .imagewtsch500mmH{
+    width: 150px;
+    height: 110px;
+  }
+  .imagewtsch500mmHAUS{
+    width: 200px;
+    height: 110px;
+  }
+  .wtsch750mmH{
+    width: 100%;
+  }
+  .imageWtsch750mmH{
+    width: 25%;
+  }
+  .imagewtsch750mmH{
+    width: 150px;
+    height: 110px;
+  }
+  .imagewtsch750mmHAUS{
+    width: 200px;
+    height: 110px;
+  }
+  .moebelhwachb{
+    width: 100%;
+  }
+  .imageMoebelhwachb{
+    width: 25%;
+  }
+  .imagemoebelhwachb{
+    width: 150px;
+    height: 110px;
+  }
+  .zubehoerwtsch500750mmH{
+    width: 100%;
+  }
+  .imageZubehoerwtsch500750mmH{
+    width: 25%;
+  }
+  .imagezubehoerwtsch500750mmHAUS{
+    width: 220px;
+    height: 110px;
+  }
+  .ergaenzungspr{
+    width: 100%;
+  }
+  .imageErgaenzungspr{
+    width: 25%;
+  }
+  .imageergaenzungspr{
+    width: 150px;
+    height: 110px;
+  }
+  .wtschcle55{
+    width: 100%;
+  }
+  .imageWtschcle55{
+    width: 25%;
+  }
+  .imagewtschcle55{
+    width: 150px;
+    height: 110px;
+  }
+  .wtschcle60{
+    width: 100%;
+  }
+  .imageWtschcle60{
+    width: 25%;
+  }
+  .imagewtschcle60{
+    width: 150px;
+    height: 110px;
+  }
+  .wtschcle65{
+    width: 100%;
+  }
+  .imageWtschcle65{
+    width: 25%;
+  }
+  .imagewtschcle65{
+    width: 150px;
+    height: 110px;
+  }
+  .universal{
+    width: 100%;
+  }
+  .imageUniversal{
+    width: 25%;
+  }
+  .imageuniversal{
+    width: 150px;
+    height: 110px;
+  }
+  .spiegelsch{
+    width: 100%;
+  }
+  .imageSpiegelsch{
+    width: 25%;
+  }
+  .imagespiegelsch{
+    width: 150px;
+    height: 110px;
+  }
+  
+
+
+
+
+
+
+
+  
+  .wholesets{
+    width: 100%;
+  }
+  .wholesets1{
+    float: left;
+    width: 25%;
+  }
+  .wholesets2{
+    width: 45%;
+    float: inline-start;
+  }
+  .imageWholesets{
+    width: 25%;
+  }
+  .imagewholesets{
+    width: 150px;
+    height: 110px;
+  }
+  .imageWholesetswsch{
+    float: left;
+    width: 30%;
+  }
+  .imagewholesetswsch{
+    width: 150px;
+    height: 110px;
+  }
+  
+  
+  
+  
+  .beispiel {
+    width: 100%;
+    text-align: center; /* Center text and elements inside .beispiel */
+    position: relative; /* Position relative for absolute positioning of .hiddenInfo */
+  }
+  .imagesBeispiel {
+    display: flex; /* Use flexbox to align images horizontally */
+    justify-content: center; /* Center images horizontally */
+    gap: 10px; /* Optional: add space between images */
+    margin-top: 20px; /* Add margin to separate from hiddenInfo */
+  }
+  .imageBeispiel {
+    display: flex; /* Ensures the image container uses flexbox */
+    justify-content: center; /* Center images within the container */
+  }
+  
+  .imagebeispiel {
+    width: 330px;
+    height: 490px;
+  }
+  

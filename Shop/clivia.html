@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Pictures/Bad.jpg"/>
+    <title>DB - Bad (Clivia)</title>
+
+    <style>
+      /* Whole Table style */
+      html, body {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        background-color: #0977a3;
+      }
+
+      body {
+        display: inline-block;
+      }
+
+      header {
+        height: auto;
+        width: 100%;
+        position: relative;
+        top: 0;
+        z-index: 999;
+        background-color: rgb(42, 53, 59);
+        border-top: solid 15px;
+        border-color: #0977a3;
+        margin-top: 0;
+        color: rgb(188, 189, 191);
+        font-family: "Courier New", Courier, monospace;
+        padding: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .logoDiv {
+        margin-left: 5%;
+        margin-top: -6px;
+        width: 110px;
+        height: auto;
+        float: left;
+        border: solid 3px;
+        border-color: rgb(188, 189, 191);
+      }
+
+      .logo {
+        width: 110px;
+        height: 90px;
+        float: left;
+      }
+
+      .linkDiv {
+        margin-left: 5%;
+        margin-top: -6px;
+        width: 110px;
+        height: auto;
+        float: left;
+        border: solid 3px;
+        border-color: rgb(188, 189, 191);
+      }
+
+      .fliese,
+      .bad,
+      .parkett,
+      .tuer {
+        width: 110px;
+        height: 90px;
+        float: left;
+      }
+
+      main {
+        position: sticky;
+        width: 100%;
+        display: inline-block;
+      }
+
+      main div {
+        float: left;
+      }
+
+      .footer {
+        position: static;
+        width: 100%;
+        height: 250px;
+        display: inline-block;
+      }
+
+      .footer div {
+        margin-top: 30px;
+        width: 30%;
+        float: left;
+      }
+
+      .footerlogo {
+        height: 200px;
+      }
+
+      .footerimg {
+        height: 200px;
+      }
+
+      .pickStyle div {
+        display: inline-block;
+      }
+
+      .pickClivia,
+      .pickDerby,
+      .pickWhite {
+        width: 33.1%;
+      }
+
+      .pickClivia a,
+      .pickDerby a,
+      .pickWhite a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        font-size: 25px;
+      }
+
+      /*BUTTON FOR INFO*/
+      .mehrInfo{
+        float: inline-start;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      .hiddenInfo {
+        display: none;
+        position: fixed; /* Use fixed positioning to keep it in place relative to the viewport */
+        left: 50%;       /* Center horizontally */
+        top: 50%;        /* Center vertically */
+        width: 50vw;     /* 50% of the viewport width */
+        padding: 10px;   /* Optional: add padding for better readability */
+        border: solid 3px;
+        background-color: white;
+        color: black;
+        transform: translate(-50%, -50%); /* Adjust position to center the element */
+        z-index: 1000;   /* Ensures the div stays on top of other elements */
+      }
+
+      button:hover {
+        color: #001F3F;
+        background-color: #fff;
+      }
+      button {
+        transition: all .5s ease;
+        color: #fff;
+        border: 3px solid rgb(58, 61, 71);;
+        font-family:'Montserrat', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        background-color : transparent;
+        padding: 10px;
+        outline: none;
+        border-radius: 4px;
+      }
+
+      /* MAIN STYLE */
+      .styles{
+        border-bottom: solid 2px;
+        border-color: black;
+      }
+      .pickClivia {
+        background-color: beige;
+      }
+      .menu{
+        width: 25.5%;
+        background-color: rgb(42, 53, 59);
+      }
+      .title{
+        margin-left: 1.5%;
+        width: 100%;
+      }
+      .title a{
+        text-decoration: none;
+        color: blanchedalmond;
+        font-size: 10px;
+      }
+      .title h2{
+        text-decoration: underline;
+      }
+      .leer{
+        float: left;
+        width: 1.5%;
+      }
+      .content{
+        float: left;
+        width:71%;
+      }
+      .content h1{
+        color: rgb(58, 61, 71);
+        font-size: 25px;
+        text-transform: uppercase;
+        text-decoration:underline overline;
+      }
+      .content h2{
+        font-size: 15px;
+      }
+      .chapter{
+        width: 100%;
+        border-bottom: solid 1px;
+      }
+
+      /* First part*/
+      .farbe{
+        width: 100%;
+      }
+      .griffe{
+        width: 100%;
+      }
+      .fuesgestelle{
+        width: 100%;
+      }
+      .imageFarbe{
+        width: 25%;
+      }
+      .imagesize1{
+        width: 90px;
+        height: 52px;
+      }
+      .imageGriff{
+        width:20%;
+      }
+      .imageFues{
+        width: 30%;
+      }
+      .imageFues1{
+        width: 90px;
+        height: 60px;
+      }
+      .imageFues2{
+        width: 110px;
+        height: 80px;
+      }
+      .imageFues3{
+        width: 110px;
+        height: 180px;
+      }
+
+      /* Second part*/
+      .badmoebelsets{
+        width: 100%;
+      }
+      .imageBadmoebelsets{
+        width: 25%;
+      }
+      .imagebadmoebelsets{
+        width: 150px;
+        height: 110px;
+      }
+      .moebelwaschtische{
+        width: 100%;
+      }
+      .imageMoebelwaschtische{
+        width: 25%;
+      }
+      .imagemoebelwaschtische{
+        width: 150px;
+        height:110px;
+      }
+      .wtsch500mmH{
+        width: 100%;
+      }
+      .imageWtsch500mmH{
+        width: 25%;
+      }
+      .imagewtsch500mmH{
+        width: 150px;
+        height: 110px;
+      }
+      .imagewtsch500mmHAUS{
+        width: 200px;
+        height: 110px;
+      }
+      .wtsch750mmH{
+        width: 100%;
+      }
+      .imageWtsch750mmH{
+        width: 25%;
+      }
+      .imagewtsch750mmH{
+        width: 150px;
+        height: 110px;
+      }
+      .imagewtsch750mmHAUS{
+        width: 200px;
+        height: 110px;
+      }
+      .moebelhwachb{
+        width: 100%;
+      }
+      .imageMoebelhwachb{
+        width: 25%;
+      }
+      .imagemoebelhwachb{
+        width: 150px;
+        height: 110px;
+      }
+      .zubehoerwtsch500750mmH{
+        width: 100%;
+      }
+      .imageZubehoerwtsch500750mmH{
+        width: 25%;
+      }
+      .imagezubehoerwtsch500750mmHAUS{
+        width: 220px;
+        height: 110px;
+      }
+      .ergaenzungspr{
+        width: 100%;
+      }
+      .imageErgaenzungspr{
+        width: 24%;
+        height: 250px;
+      }
+      .imageergaenzungspr{
+        width: 150px;
+        height: 110px;
+      }
+      .wtschcle55{
+        width: 100%;
+      }
+      .imageWtschcle55{
+        width: 25%;
+      }
+      .imagewtschcle55{
+        width: 150px;
+        height: 110px;
+      }
+      .wtschcle60{
+        width: 100%;
+      }
+      .imageWtschcle60{
+        width: 25%;
+        height: 310px;
+      }
+      .imagewtschcle60{
+        width: 150px;
+        height: 110px;
+      }
+      .wtschcle65{
+        width: 100%;
+      }
+      .imageWtschcle65{
+        width: 25%;
+        height: 310px;
+      }
+      .imagewtschcle65{
+        width: 150px;
+        height: 110px;
+      }
+      .universal{
+        width: 100%;
+      }
+      .imageUniversal{
+        width: 25%;
+        height: 250px;
+      }
+      .imageuniversal{
+        width: 150px;
+        height: 110px;
+      }
+      .spiegelsch{
+        width: 100%;
+      }
+      .imageSpiegelsch{
+        width: 25%;
+      }
+      .imagespiegelsch{
+        width: 150px;
+        height: 110px;
+      }
+
+      .wholesets{
+        width: 100%;
+      }
+      .wholesets1{
+        float: left;
+        width: 25%;
+      }
+      .wholesets2{
+        width: 45%;
+        float: inline-start;
+      }
+      .imageWholesets{
+        width: 25%;
+      }
+      .imagewholesets{
+        width: 150px;
+        height: 110px;
+      }
+      .imageWholesetswsch{
+        float: left;
+        width: 30%;
+      }
+      .imagewholesetswsch{
+        width: 150px;
+        height: 110px;
+      }
+
+      .beispiel {
+        width: 100%;
+        text-align: center; /* Center text and elements inside .beispiel */
+        position: relative; /* Position relative for absolute positioning of .hiddenInfo */
+      }
+      .imagesBeispiel {
+        display: flex; /* Use flexbox to align images horizontally */
+        justify-content: center; /* Center images horizontally */
+        gap: 10px; /* Optional: add space between images */
+        margin-top: 20px; /* Add margin to separate from hiddenInfo */
+      }
+      .imageBeispiel {
+        display: flex; /* Ensures the image container uses flexbox */
+        justify-content: center; /* Center images within the container */
+      }
+
+      .imagebeispiel {
+        width: 330px;
+        height: 490px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logoDiv">
+        <a href="../index.html" target="_blank">
+          <img class="logo" src="Pictures/Logo.jpg" />
+        </a>
+      </div>
+
+        <div class="linkDiv">
+          <a href="fliese.html" target="_blank">
+            <img class="fliese" src="Pictures/Fliese.jpg" />
+          </a>
+        </div>
+
+        <div class="linkDiv">
+          <a href="parkett.html" target="_blank">
+            <img class="parkett" src="Pictures/Parkett.jpg" />
+          </a>
+        </div>
+
+        <div class="linkDiv">
+          <a href="tuer.html" target="_blank">
+            <img class="tuer" src="Pictures/Tuer.jpg" />
+          </a>
+        </div>
+        <h1>die Perle</h1>
+        <h5>MODERNE BADGESTALTUNG</h5>
+      </div>
+    </header>
+
+    <div class="styles">
+      <div class="pickStyle">
+        <div class="pickClivia">
+          <a href="clivia.html" target="_blank"><h3>CLIVIA</h3></a>
+        </div>
+        <div class="pickDerby">
+          <a href="derby.html" target="_blank"><h3>DERBY</h3></a>
+        </div>
+        <div class="pickWhite">
+          <a href="white.html" target="_blank"><h3>WHITE</h3></a>
+        </div>
+      </div>
+    </div>
+  
+    <main>
+
+      <div class="menu">
+        <div class="title">
+          <ul>
+            <a href="#farbe">
+            <li><h2>Farben</h2></li>
+            </a> 
+            <a href="#griffe">
+              <li><h2>Griffe</h2></li>
+            </a>
+            <a href="#fuesgestelle">
+              <li><h2>Füßgestelle</h2></li>
+            </a>
+            <a href="#badmoebelsets">
+             <li> <h2>Bad Möbelsets</h2></li>
+            </a>
+            <a href="#moebelwaschtische">
+              <li><h2>Möbelwaschtische</h2></li>
+            </a>
+            <a href="#wtsch500mmH">
+              <li><h2>Waschtischunterschränke 500mm hoch</h2></li>
+            </a>
+            <a href="#wtsch750mmH">
+             <li><h2>Waschtischunterschränke 750mm hoch</h2></li>
+            </a>
+            <a href="#moebelhwschb">
+              <li><h2>Möbelhandwaschbecken</h2></li>
+            </a>
+            <a href="#zubehoerwtsch500750mmH">
+              <li><h2>Zubehör zu Waschtischunterschränke 500mm und 750mm hoch</h2></li>
+            </a>
+            <a href="#ergaenzungspr">
+              <li><h2>Ergänzungsprodukte</h2></li>
+            </a>
+            <a href="#wtschcle55">
+              <li><h2>Waschtischunterschrank zu CLE55</h2></li>
+            </a>
+            <a href="#wtschcle60">
+              <li><h2>Waschtischunterschränke zu CLE60</h2></li>
+            </a>
+            <a href="#wtschcle65">
+              <li><h2>Waschtischunterschränke zu CLE66</h2></li>
+            </a>
+            <a href="#universal">
+              <li><h2>Universalunterschrank für wandhängende Waschtische</h2></li>
+            </a>
+            <a href="#spiegelsch">
+              <li><h2>Spiegelschränke und Spiegel</h2></li>
+            </a>
+            <a href="#wholesets">
+              <li><h2>Badmöbel Sets (Waschtische)</h2></li>
+            </a>
+            <a href="#beispiel">
+              <li><h2>Badmöbelanlagen Beispiele</h2></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leer">
+        <p></p>
+      </div>
+
+      <div class="content">
+        <div class="chapter">
+          <div class="farbe" id="farbe">
+            <h1>farben</h1>
+            <div class="imageFarbe">
+              <a href="Pictures/PicturesB/Clivia/Farben/weHGLWeiss.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Farben/weHGLWeiss.jpg" />
+              </a>
+              <h2>HGL WEIß</h2>
+            </div>
+            <div class="imageFarbe">
+              <a href="Pictures/PicturesB/Clivia/Farben/edEichedark.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Farben/edEichedark.jpg" />
+              </a>
+              <h2>EICHE DARK</h2>
+            </div>
+            <div class="imageFarbe">
+              <a href="Pictures/PicturesB/Clivia/Farben/seSommereiche.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Farben/seSommereiche.jpg" />
+              </a>
+              <h2>SOMMEREICHE</h2>
+            </div>
+            <div class="imageFarbe">
+              <a href="Pictures/PicturesB/Clivia/Farben/gpGraphitgrau.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Farben/gpGraphitgrau.jpg" />
+              </a>
+              <h2>GRAPHIT GRAU</h2>
+            </div>
+            <div class="mehrInfo">
+              <button>
+                info
+              </button>
+            </div>
+            <div class="hiddenInfo">
+              <p>• Front- und Waschtischplatten - Farben</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="griffe" id="griffe">
+            <h1>griffe</h1>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/Clivia/Griffe/clg1.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Griffe/clg1.jpg" />
+              </a>
+              <h2>CLG 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Chrom</p>
+                <p>• Länge: 225mm</p>
+                <p>• Bohrabstand: 192mm</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/Clivia/Griffe/clg2.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Griffe/clg2.jpg" />
+              </a>
+              <h2>CLG 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Chrom</p>
+                <p>• Länge: 210mm</p>
+                <p>• Bohrabstand: 192mm</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/Clivia/Griffe/clg3.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Griffe/clg3.jpg" />
+              </a>
+              <h2>CLG 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Chrom</p>
+                <p>• Länge: 200mm</p>
+                <p>• Bohrabstand: 192mm</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/Clivia/Griffe/clg4.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Griffe/clg4.jpg" />
+              </a>
+              <h2>CLG 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Alu eloxiert</p>
+                <p>• Länge: 210mm</p>
+                <p>• Bohrabstand: 170mm</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/Clivia/Griffe/clg5.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/Clivia/Griffe/clg5.jpg" />
+              </a>
+              <h2>CLG 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Matt schwarz</p>
+                <p>• Länge: 206mm</p>
+                <p>• Bohrabstand: 192mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="fuesgestelle" id="fuesgestelle">
+            <h1>füßgestelle</h1>
+            <div class="imageFues">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg" target="_blank">
+                <img class="imageFues1"src="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg" />
+              </a>
+              <h2>CLF 33</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Fuß</p>
+                <p>• Matt schwarz</p>
+                <p>• 112 x 350 x 18mm</p>
+              </div>
+            </div>
+            <div class="imageFues">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf44.jpg" target="_blank">
+                <img class="imageFues2"src="Pictures/PicturesB/Clivia/Fussgestelle/clf44.jpg" />
+              </a>
+              <h2>CLF 44</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Fuß</p>
+                <p>• Matt schwarz</p>
+                <p>• 112 x 440 x 18mm</p>
+              </div>
+            </div>
+            <div class="imageFues">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg" target="_blank">
+                <img class="imageFues3"src="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg" />
+              </a>
+              <h2>CLFG</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Fuß mit Handtuchhalter</p>
+                <p>• Matt schwarz</p>
+                <p>• 862 x 440 x 106mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="badmoebelsets" id="badmoebelsets">
+            <h1>bad möbelsets</h1>
+            <div class="imageBadmoebelsets">
+              <a href="Pictures/PicturesB/Clivia/Moebelsets/Moebel1.jpg" target="_blank">
+                <img class="imagebadmoebelsets" src="Pictures/PicturesB/Clivia/Moebelsets/Moebel1.jpg"/>
+              </a>
+              <h2>UNTERSCHRANK - SET 500mm MIT TÜR</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank: 1 Korpus HGl weiß, inkl. Befestigung (H 500mm x B 350mm)</p>
+                <p>• Mit Bohrungen für Tür</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• 1 Türfront, inkl. Befestigung (H 500mm x B 350mm)</p>
+                <p>• Griff, inkl. Griffschrauben</p>
+              </div>
+            </div>
+            <div class="imageBadmoebelsets">
+              <a href="Pictures/PicturesB/Clivia/Moebelsets/Moebel2.jpg" target="_blank">
+                <img class="imagebadmoebelsets" src="Pictures/PicturesB/Clivia/Moebelsets/Moebel2.jpg"/>
+              </a>
+              <h2>HALBHOCHSCHRANK - SET 750mm MIT TÜR</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Halbunterschrank: 1 Korpus HGL weiß, inkl. Befestigung (H 750mm x B 350mm)</p>
+                <p>• Mit Bohrungen für Tür</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• 1 Türfront, inkl. Befestigung (H 750mm x B 350mm)</p>
+                <p>• Griff, inkl. Griffschrauben</p>
+              </div>
+            </div>
+            <div class="imageBadmoebelsets">
+              <a href="Pictures/PicturesB/Clivia/Moebelsets/Moebel3.jpg" target="_blank">
+                <img class="imagebadmoebelsets" src="Pictures/PicturesB/Clivia/Moebelsets/Moebel3.jpg"/>
+              </a>
+              <h2>HALBHOCHSCHRANK - SET 750mm MIT TÜR UND AUSZUG</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Halbunterschrank: 1 Korpus HGL weiß, inkl. Befestigung (H 750mm x B 350mm)</p>
+                <p>• Mit Bohrungen für Tür und Auszüge</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• 1 Türfront, inkl. Befestigung (H 500mm x B 350mm)</p>
+                <p>• 1 Auszug inkl. Schienen (H 250mm x B 350mm)</p>
+                <p>• Griff, inkl. Griffschrauben</p>
+              </div>
+            </div>
+            <div class="imageBadmoebelsets">
+              <a href="Pictures/PicturesB/Clivia/Moebelsets/Moebel4.jpg" target="_blank">
+                <img class="imagebadmoebelsets" src="Pictures/PicturesB/Clivia/Moebelsets/Moebel4.jpg"/>
+              </a>
+              <h2>GÄSTE - WASCHTISCH - SET MIT LICHTSPIEGEL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mineralguss - Waschtisch 500mm ohne Überlauf</p>
+                <p>• Waschtischunterschrank: 1 Korpus HGL weiß inkl. Befestigung (H 500mm x B 500mm)</p>
+                <p>• Mit Bohrungen für Tür</p>
+                <p>• Türanschlag frei wählbar</p>
+                <p>• 1 Türfront, inkl. Befestigung (H 500mm x B 500mm)</p>
+                <p>• Griff, inkl. Griffschrauben</p>
+                <p>• LED-Lichtspiegel: waagerechte Beleuchtung oben (14 Watt)
+                <p>• Energieeffizienzklasse A++</p>
+                <p>• 1 Glasablage unten</p>
+              </div>
+            </div>
+            <div class="imageBadmoebelsets">
+              <a href="Pictures/PicturesB/Clivia/Moebelsets/Moebel5.jpg" target="_blank">
+                <img class="imagebadmoebelsets" src="Pictures/PicturesB/Clivia/Moebelsets/Moebel5.jpg"/>
+              </a>
+              <h2>GÄSTE - WASCHTISCH - SET OHNE LICHTSPIEGEL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mineralguss - Waschtisch 500mm ohne Überlauf</p>
+                <p>• H 750mm x B 350mm</p>
+                <p>• Mit Bohrungen für Tür</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• 1 Türfront, inkl. Befestigung</p>
+                <p>• H 750mm x B 350mm</p>
+                <p>• Griff, inkl. Griffschrauben</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="moebelwaschtische" id="moebelwaschtische">
+            <h1>möbelwaschtische</h1>
+            <div class="imageMoebelwaschtische">
+              <a href="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtk60.jpg" target="_blank">
+                <img class="imagemoebelwaschtische" src="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtk60.jpg">
+              </a>
+              <h2>KERAMIK-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• weiß</p>
+                <p>• mit Überlauf (bereit angegossen)</p>
+                <p>• 1 Hahnloch</p>
+                <p>• inklusive optionaler Überlaufblenden Chrom und Schwarz</p>
+                <p>• Dimensionen: H 20mm (Stärke) x T 460mm x B 610 / 810 / 1.010mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelwaschtische">
+              <a href="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtk120d.jpg" target="_blank">
+                <img class="imagemoebelwaschtische" src="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtk120d.jpg">
+              </a>
+              <h2>DOPPEL-KERAMIK-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• weiß</p>
+                <p>• mit Überlauf</p>
+                <p>• mit 2 Becken</p>
+                <p>• mit 2 Hanhlöchern</p>
+                <p>• inklusive optionaler Überlaufblenden Chrom und Schwarz</p>
+                <p>• Dimensionen: H 20mm (Stärke) x T 460mm x B 1.210mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelwaschtische">
+              <a href="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm60.jpg" target="_blank">
+                <img class="imagemoebelwaschtische" src="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm60.jpg">
+              </a>
+              <h2>MINERALGUSS-WASCHTISCH</h2>
+              <div class="mehrInfo">  
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• weiß</p>
+                <p>• Becken mittig</p>                  
+                <p>• mit Überlauf</p>
+                <p>• mit 1 Hahnloch</p>
+                <p>• inklusive optionaler Überlaufblenden Chrom und Schwarz</p>
+                <p>• Dimensionen: H 15mm (Stärke) x T 470mm x B 600 / 800 / 1.000 / 1.200mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelwaschtische">
+              <a href="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm80r.jpg" target="_blank">
+                <img class="imagemoebelwaschtische" src="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm80r.jpg">
+              </a>
+              <h2>MINERALGUSS-WASCHTISCH-ASYMMETRISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+            <div class="hiddenInfo">
+                <p>• weiß</p>
+                <p>• Ablage rechts, Becken links</p>
+                <p>• Ablage links, Becken rechts</p>
+                <p>• Becken asymmetrisch</p>
+                <p>• mit Überlauf</p>
+                <p>• mit 1 Hahnloch</p>
+                <p>• inklusive optionaler Überlaufblenden Chrom und Schwarz</p>
+                <p>• Dimensionen: H 15mm (Stärke) x T 470mm x B 800mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelwaschtische">
+              <a href="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm120d.jpg" target="_blank">
+                <img class="imagemoebelwaschtische" src="Pictures/PicturesB/Clivia/Moebelwaschtische/clwtm120d.jpg">
+              </a>
+              <h2>DOPPEL-MINERALGUSS-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• weiß</p>
+                <p>• mit 2 Becken</p>
+                <p>• mit 2 Überläufen</p>
+                <p>• mit 2 Hahnlöchern</p>
+                <p>• inklusive optionaler Überlaufblenden Chrom und Schwarz</p>
+                <p>• Dimensionen: H 15mm (Stärke) x T 470mm x B 1.200mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtsch500mmH" id="wtsch500mmH">
+            <h1>waschtischunterschränke 500mm hoch</h1>
+            <div class="imageWtsch500mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+                <img class="imagewtsch500mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische mit Becken mittig</p>
+                <p>• Dimensionen: H 500mm x T 440mm x B 600 / 800 / 1.000 / 1.200mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch500mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu12050d.jpg">
+                <img class="imagewtsch500mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu12050d.jpg">
+              </a>
+              <h2>KORPUS FÜR DOPPEL-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische mit Becken mittig</p>
+                <p>• Dimensionen: H 500mm x T 440mm x B 1.200mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch500mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu8050l.jpg">
+                <img class="imagewtsch500mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu8050l.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH ASYMETRISCH LINKS</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische Becken rechts/Ablage links</p>
+                <p>• Dimensionen: H 500mm x T 440mm x B 800mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch500mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu8050r.jpg">
+                <img class="imagewtsch500mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu8050r.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH ASYMETRISCH RECHTS</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische Becken links/Ablage rechts</p>
+                <p>• Dimensionen: H 500mm x T 440mm x B 800mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch500mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+              </a>
+              <h2>FRONTEN FÜR AUSZÜGE UNTERSCHRÄNKE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Front, wird pro Auszug 1 x benötigt ink. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra Bestellt werden)</p>
+                <p>• Dimensionen: H 250mm x T 16mm (Stärke) x B 600 / 800 / 1.000 / 1.200mm</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtsch750mmH" id="wtsch750mmH">
+            <h1>waschtischunterschränke 750mm hoch</h1>
+            <div class="imageWtsch750mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu6075.jpg">
+                <img class="imagewtsch750mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu6075.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische mit Becken mittig</p>
+                <p>• Dimensionen: H 750mm x T 440mm x B 600 / 800 / 1.000 / 1.200mm</p>    
+              </div>
+            </div>
+            <div class="imageWtsch750mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+                <img class="imagewtsch750mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+              </a>
+              <h2>KORPUS FÜR DOPPEL-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische mit Becken mittig</p>
+                <p>• Dimensionen: H 750mm x T 440mm x B 1.200mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch750mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu8075l.jpg">
+                <img class="imagewtsch750mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu8075l.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH ASYMMETRISCH LINKS</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische Becken rechts/Ablage links</p>
+                <p>• Dimensionen: H 750mm x T 440mm x B 800mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch750mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu8075r.jpg">
+                <img class="imagewtsch750mmH" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu8075r.jpg">
+              </a>
+              <h2>KORPUS FÜR WASCHTISCH ASYMMETRISCH RECHTS</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Für Waschtische BEcken links/Ablage rechts</p>
+                <p>• Dimensionen: H 750mm x T 440mm x B 800mm</p>
+              </div>
+            </div>
+            <div class="imageWtsch750mmH">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+                <img class="imagewtsch750mmHAUS" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+              </a>
+              <h2>FRONTEN FÜR UNTERSCHRÄNKE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Front, wird pro Auszug 1 x benötigt ink. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra Bestellt werden)</p>
+                <p>• Dimansionen: H 250mm x T 16mm (Stärke) x B 600 / 800 / 1.000 / 1.200mm</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="moebelhwachb" id="moebelhwachb">
+            <h1>möbelhandwaschbecken</h1>
+            <div class="imageMoebelhwachb">
+              <a href="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clwtm50.jpg">
+                <img class="imagemoebelhwachb" src="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clwtm50.jpg">
+              </a>
+              <h2>MINERALGUSS-WASCHTISCH</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Weiß</p>
+                <p>• Becken mittig</p>
+                <p>• ohne Überlauf</p>
+                <p>• mit 1 Hahnloch</p>
+                <p>• Dimensionen: H 15mm (Stärke) x T 400mm x B 500mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelhwachb">
+              <a href="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clwtu5050.jpg">
+                <img class="imagemoebelhwachb" src="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clwtu5050.jpg">
+              </a>
+              <h2>KORPUS FÜR MÖBEL-HANDWASCHBECKEN</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• mit Bohrungen für 1 Tür</p>
+                <p>• Türanschlagist frei Wählbar inkl. Befestigungsmaterial</p>
+                <p>• Für Waschtische mit Becken mittig</p>
+                <p>• Dimensionen: H 500mm x T 400mm x B 500mm</p>
+              </div>
+            </div>
+            <div class="imageMoebelhwachb">
+              <a href="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clf50e.jpg">
+                <img class="imagemoebelhwachb" src="Pictures/PicturesB/Clivia/Moebelhandwaschbecken/clf50e.jpg">
+              </a>
+              <h2>TÜRFRONTEN FÜR MÖBEL-HANDWASCHBECKEN-UNTERSCHRANK</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Türfront für Waschtischunterschrank 500mm breit inkl. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra Bestellt werden)</p>
+                <p>• Dimensionen: H 500mm x T 16mm (Stärke) x B 500mm</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="zubehoerwtsch500750mmH" id="zubehoerwtsch500750mmH">
+            <h1>zubehör zu waschtischunterschränke 500mm und 750mm hoch</h1>
+            <div class="imageZubehoerwtsch500750mmH">
+              <a href="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+                <img class="imagezubehoerwtsch500750mmHAUS" src="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+              </a>
+              <h2>ABLAGEPLATTE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Zur montage zwischen Fußgestell mit Handtuchhalter (dazu werden 2 Fußgestelle CLFG benötigt)</p>
+                <p>• inkl. Befestigungsmaterial</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 72mm x T 422mm x B 636 / 836 / 1.036 / 1.236mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoerwtsch500750mmH">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+                <img class="imageFues3" src="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+              </a>
+              <h2>FUßGESTELL MIT HANDTUCHHALTER SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 862mm x T 440mm x B 106mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoerwtsch500750mmH">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf44.jpg">
+                <img class="imageFues2" src="Pictures/PicturesB/Clivia/Fussgestelle/clf44.jpg">
+              </a>
+              <h2>FUß SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 112mm x T 440mm x B 18mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="ergaenzungspr" id="ergaenzungspr">
+            <h1>ergänzungsprodukte</h1>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clwsw.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clwsw.jpg">
+              </a>
+              <h2>OFFENES REGAL SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Ohne Ablageplatte (es werden 2 benötigt)</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 300mm x T 350mm x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clawwe.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clawwe.jpg">
+              </a>
+              <h2>2 ABLAGEPLATTEN FÜR OFFENES REGAL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Zur Montage oben und unten in offenes Regal inkl. Befestigungsmaterial</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 16mm x T 314mm x B 314mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/cltwe.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/cltwe.jpg">
+              </a>
+              <h2>TABLETT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Rahmen Schwarz matt Rückwand bzw. Boden in Frontdekor</p>
+                <p>• Kann lose auf Halbhochschränke gelegt ODER an die Wand geschraubt werden</p>
+                <p>• Inkl. Befestigungsmaterial</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 80mm x T 350mm x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clus3550.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clus3550.jpg">
+              </a>
+              <h2>UNTERSCHRANK 500mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial mit Bohrungen für Tür</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• Türanschlag ist frei wählbar (Topfbandbohrungen im Korpus sind jeweils links und rechts vorhanden)</p>
+                <p>• Dimensionen: H 500mm x T 350mm + 16mm (Front) x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clhhs3575.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clhhs3575.jpg">
+              </a>
+              <h2>UNTERSCHRANK 750mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial mit Bohrungen für Tür</p>
+                <p>• 1 Glaseinlegeboden</p>
+                <p>• Türanschlag ist frei wählbar (Topfbandbohrungen im Korpus sind jeweils links und rechts vorhanden)</p>
+                <p>• Dimensionen: H 750mm x T 350mm + 16mm (front) x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3550we.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3550we.jpg">
+              </a>
+              <h2>TÜR FÜR HALBHOCHSCHRANK 500mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Türfront inkl. Befestigungsmaterial (Montageplatte und Scharnier zur Selbstmontage)</p>
+                <p>• Türanschlag frei wählbar ohne Griffe (müssen extra bestellt werden)</p>
+                <p>• Dimensionen: H 500mm x T 16mm x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspre">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3575we.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3575we.jpg">
+              </a>
+              <h2>TÜR FÜR HALBHOCHSCHRANK<br> 750mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Türfront inkl. Befestigungsmaterial (Montageplatte und Scharnier zur Selbstmontage)</p>
+                <p>• Türanschlag frei wählbar ohne Griffe (müssen extra bestellt werden)</p>
+                <p>• Dimensionen: H 750mm x T 16mm x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/claz35we.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/claz35we.jpg">
+              </a>
+              <h2>AUSZUG FÜR HALBHOCHSCHRANK 750mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Auszug inkl. Schienen zur Selbsmontage</p>
+                <p>• ohne Griffe (müssen extra bestellt werden)</p>
+                <p>• Dimensionen: H 250mm x B 350mm</p>
+              </div>
+            </div>
+            <div class="imageErgaenzungspr">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+                <img class="imageergaenzungspr" src="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+              </a>
+              <h2>FUß SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 122mm x T 350mm x B 18mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtschcle55" id="wtschcle55">
+            <h1>waschtischunterschrank zu cle55</h1>
+            <div class="imageWtschcle55">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle55/cle55.jpg">
+                <img class="imagewtschcle55" src="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle55/cle55.jpg">
+              </a>
+              <h2>KERAMIK-WASCHTISCH ECKIG</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Weiß</p>
+                <p>• mit Hahnloch</p>
+                <p>• mit Überlauf</p>
+                <p>• Dimensionen: H 185mm x T 480mm x B 550mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle55">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+                <img class="imagewtschcle55" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+              </a>
+              <h2>KORPUS FÜR KERAMIK-WASCHTISCH CLIVIA CLE55</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-Close (ohne Front)</p>
+                <p>• Siphonausschnitt in oberen Auszug</p>
+                <p>• Dimensionen: H 460mm x T 400mm x B 470mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle55">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+              </a>
+              <h2>FRONTEN FÜR UNTERSCHRÄNKE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Front, wird pro Auszug 1x benötigt inkl. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra bestellt werden)</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 225mm x T 16mm (Stärke) x B 470mm</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtschcle60" id="wtschcle60">
+            <h1>waschtischunterschrank zu cle60</h1>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle60/cle60.jpg">
+                <img class="imagewtschcle60" src="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle60/cle60.jpg">
+              </a>
+              <h2>KERAMIK-WASCHTISCH ECKIG</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Weiß</p>
+                <p>• mit Hahnloch</p>
+                <p>• mit Überlauf</p>
+                <p>• Dimensionen: H 185mm x T 480mm x B 600mm</p>
+              </div> 
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+                <img class="imagewtschcle60" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+              </a>
+              <h2>KORPUS FÜR KERAMIK-WASCHTISCH CLIVIA CLE60</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-CLose (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Dimensionen: H 460mm x T 420mm x B 520mm</p>
+              </div> 
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+                <img class="imagewtschcle60" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+              </a>
+              <h2>KORPUS FÜR KERAMIK-WASCHTISCH CLIVIA CLE60</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-CLose (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Dimensionen: H 685mm x T 420mm x B 520mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+              </a>
+              <h2>FRONTEN FÜR UNTERSCHRÄNKE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Front, wird pro Auszug 1x benötigt inkl. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra bestellt werden)</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 225mm x T 16mm (Stärke) x B 520mm</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+                <img class="imageFues2" src="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+              </a>
+              <h2>FUß ZU CLE60 SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 104mm x T 420mm x B 18mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+              </a>
+              <h2>ABLAGEPLATTE FÜR FÜßGESTELL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Ablageplatte für Fußgestell zu CLE60</p>
+                <p>• Zur montage zwischen Fußgestell mit Handtuchhalter (dazu werden 2 Fußgestelle CLFG benötigt)</p>
+                <p>• inkl. Befestigungsmaterial</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 72mm x T 420mm x B 556mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle60">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+                <img class="imageFues3" src="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+              </a>
+              <h2>FUßGESTELL MIT HANDTUCHHALTER ZU CLE60 SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 780mm x T 420mm x B 106mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtschcle65" id="wtschcle65">
+            <h1>waschtischunterschrank zu cle65</h1>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle65/cle65.jpg">
+                <img class="imagewtschcle65" src="Pictures/PicturesB/Clivia/Waschtischunterschrankzucle65/cle65.jpg">
+              </a>
+              <h2>KERAMIK-WASCHTISCH ECKIG</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Weiß</p>
+                <p>• mit Hahnloch</p>
+                <p>• mit Überlauf</p>
+                <p>• Dimensionen: H 185mm x T 480mm x B 600mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+                <img class="imagewtschcle65" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clwtu6050.jpg">
+              </a>
+              <h2>KORPUS FÜR KERAMIK-WASCHTISCH CLIVIA CLE65</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 2 Auszüge mit Soft-CLose (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Dimensionen: H 460mm x T 420mm x B 570mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+                <img class="imagewtschcle65" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke750/clwtu12075d.jpg">
+              </a>
+              <h2>KORPUS FÜR KERAMIK-WASCHTISCH CLICIA CLE65</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Befestigungsmaterial</p>
+                <p>• 3 Auszüge mit Soft-CLose (ohne Front)</p>
+                <p>• Siphonausschnitt im oberen Auszug</p>
+                <p>• Dimensionen: H 685mm x T 420mm x B 570mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Waschtischunterschraenke500/clf60we.jpg">
+              </a>
+              <h2>FRONTEN FÜR UNTERSCHRÄNKE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Front, wird pro Auszug 1x benötigt inkl. Befestigungsmaterial</p>
+                <p>• ohne Griff (muss extra bestellt werden)</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 225mm x T 16mm (Stärke) x B 520mm</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+                <img class="imageFues2" src="Pictures/PicturesB/Clivia/Fussgestelle/clf33.jpg">
+              </a>
+              <h2>FUß ZU CLE65 SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 104mm x T 420mm x B 18mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Zubehoerzuwaschtischunterschraenke500und750mmhoch/clafg60we.jpg">
+              </a>
+              <h2>ABLAGEPLATTE FÜR FUßGESTELL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Ablageplatte für Fußgestell zu CLE60</p>
+                <p>• Zur montage zwischen Fußgestell mit Handtuchhalter (dazu werden 2 Fußgestelle CLFG benötigt)</p>
+                <p>• inkl. Befestigungsmaterial</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 72mm x T 420mm x B 556mm</p>
+              </div>
+            </div>
+            <div class="imageWtschcle65">
+              <a href="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+                <img class="imageFues3" src="Pictures/PicturesB/Clivia/Fussgestelle/clfg.jpg">
+              </a>
+              <h2>FUßGESTELL MIT HANDTUCHHALTER ZU CLE65 SCHWARZ MATT</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Aus Aluprofil 18 x 18mm inkl. Befestigungsmaterial</p>
+                <p>• Verwendung links und rechts möglich</p>
+                <p>• Wird komplett vormontiert geliefert</p>
+                <p>• Dimensionen: H 780mm x T 420mm x B 106mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="universal" id="universal">
+            <h1>universalunterschrank für wandhängende waschtische</h1>
+            <div class="imageUniversal">
+              <a href="Pictures/PicturesB/Clivia/Universalschrankfuerwandhaengendewaschtische/clwtu6051.jpg">
+                <img class="imageuniversal" src="Pictures/PicturesB/Clivia/Universalschrankfuerwandhaengendewaschtische/clwtu6051.jpg">
+              </a>
+              <h2>WASCHTISCHUNTERSCHRANK 600mm INKL. WASCHTISCHPLATTE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Korpus in HGL weiß inkl. Waschtischplatte mit Standardausschnitt</p>
+                <p>• Befestigungsmaterial</p>
+                <p>• Böhrungen für 2 Türen nebeneinander (Topbandbohrungen im Korpus sind jeweils links und rechts vorhanden)</p>
+                <p>• Dimensionen: H 516mm x T 460mm x B 600mm</p>
+              </div>
+            </div>
+            <div class="imageUniversal">
+              <a href="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3550we.jpg">
+                <img class="imageuniversal" src="Pictures/PicturesB/Clivia/Ergaenzungsprodukte/clf3550we.jpg">
+              </a>
+              <h2>TÜR FÜR WASCHTISCHUNTERSCHRANK 600mm</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Türfront ikl. Befestigungsmaterial (montageplatte und Scharnier zur Selbstmontage)</p>
+                <p>• Türanschlag frei wählbar ohne Griffe (müssen extra bestellt werden)</p>
+                <p>• Es müssen 2 Türen pro Schrank bestellt werden</p>
+                <p>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</p>
+                <p>• Dimensionen: H 500mm x T 16mm x B 300mm</p>
+                <h6>++ GRIFFE</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="spiegelsch" id="spiegelsch">
+            <h1>spiegelschränke und spiegel</h1>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsps60led.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsps60led.jpg">
+              </a>
+              <h2>SPIEGELSCHRANK</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Korpus in HGL weiß</p>
+                <p>• 2 doppelt verspiegelte Türen inkl. Dämpfung (aufgesteckt auf Scharnier)</p>
+                <p>• 2 kippsichere, höhenverstellbare Glaseinlegeböden</p>
+                <p>• waagerechte LED-Beleuchtung oben (14 Watt je Meter)</p>
+                <p>• Schalter-Steckdosen-Element im Schrank</p>
+                <p>• Dimensionen: H 716mm x T 170mm x B 600 / 800 / 1.000mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsps120led.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsps120led.jpg">
+              </a>
+              <h2>SPIEGELSCHRANK</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Korpus in HGL weiß</p>
+                <p>• 3 doppelt verspiegelte Türen inkl. Dämpfung (aufgesteckt auf Scharnier)</p>
+                <p>• 4 kippsichere, höhenverstellbare Glaseinlegeböden</p>
+                <p>• waagerechte LED-Beleuchtung oben (14 Watt je Meter)</p>
+                <p>• Schalter-Steckdosen-Element im Schrank</p>
+                <p>• Türanschlag Links-Rechts-Rechts</p>
+                <p>• Dimensionen: H 716mm x T 170mm x B 1.200mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsp50.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/clsp50.jpg">
+              </a>
+              <h2>FLÄCHENSPIEGEL</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Waagerechte LED-Beleuchtung oben (14 Watt je Meter)</p>
+                <p>• Schaltung über Raum</p>
+                <p>• Glasablage unten</p>
+                <p>• Dimensionen: H 716mm x T 105mm x B 500 / 600 / 800 / 1.000 / 1.200mm</p>    
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/cla50sw.jpg">
+                <img class="imagewtsch500mmHAUS" src="Pictures/PicturesB/Clivia/Spiegelschraenkeundspiegel/cla50sw.jpg">
+              </a>
+              <h2>ABLAGE</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Zur Montage unter dem Flächenspiegel</p>
+                <p>• Oberfläche Schwarz matt</p>
+                <p>• Glasablage am Spiegel wird demontiert und stattdessen die schwarze Ablage in die Halterung eingehängt. Die nicht mehr benötigte Glasablage wird nicht zurückgenommen</p>
+                <p>• Dimensionen: H 100mm x T 100mm x B 500 / 600 / 800 / 1.000 / 1.200mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wholesets" id="wholesets">
+            <h1>badmöbel sets (waschtische)</h1>
+            <div class="wholesets1">
+              <div class="imageWholesets">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/bms1.jpg">
+                  <img class="imagewholesets" src="Pictures/PicturesB/Clivia/Badmoebelsets/bms1.jpg">
+                </a>
+                <h2>WASCHTISCHSET MIT SPIEGELSCHRANK 1</h2>
+                <div class="mehrInfo">
+                  <button>
+                    info
+                  </button>
+                </div>
+                <div class="hiddenInfo">
+                  <p>• Spiegelschrank Korpus in HGL weiß, 2 doppelt verspiegelte Türen inkl. Dämpfung, waagerechte LED-Beleuchtung, Schalter-Steckdosen-Element im Schrank (bzw.; in Breite 1.200mm mit 3 doppelt verspiegelten Türen)</p>
+                  <p>• Waschtisch inkl. Überlaus aus Keramik oder Mineralguss (bzw.; in Breite 1.200mm als Einzel- oder Doppel-Waschtisch)</p>
+                  <p>• Korpus für Keramik- und Mineralguss-Waschtisch: 1 Korpus in HGL weiß inkl. Befestigung, 2 Auszüge mit Soft-Close</p>
+                  <p>• Fronten für Unterschrank: 2 Fronten inkl. Befestigung</p>
+                  <p>• Griffe inkl. Griffschrauben</p>
+                  <p>• Inkl. optionaler Überlaufblenden Chrom und Schwarz</p>
+                  <h4>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</h4>
+                </div>
+              </div>
+            </div>
+            <div class="wholesets1">
+              <div class="imageWholesets">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/bms2.jpg">
+                  <img class="imagewholesets" src="Pictures/PicturesB/Clivia/Badmoebelsets/bms2.jpg">
+                </a>
+                <h2>WASCHTISCHSET MIT SPIEGELSCHRANK 2</h2>
+                <div class="mehrInfo">
+                  <button>
+                    info
+                  </button>
+                </div>
+                <div class="hiddenInfo">
+                  <p>• Spiegelschrank Korpus in HGL weiß, 2 doppelt verspiegelte Türen inkl. Dämpfung,waagerechte LED-Beleuchtung, Schalter-Steckdosen-Element im Schrank (bzw.; (in Breite 1.200mm mit 3 doppelt verspiegelten Türen)</p>
+                  <p>• Waschtisch inkl. Überlaus aus Keramik oder Mineralguss (bzw.; in Breite 1.200mm als Einzel- oder Doppel-Waschtisch)</p>
+                  <p>• Korpus für Keramik- und Mineralguss-Waschtisch: 1 Korpus in HGL weiß inkl. Befestigung, 2 Auszüge mit Soft-Close</p>
+                  <p>• Fronten für Unterschrank: 3 Fronten inkl. Befestigung</p>
+                  <p>• Griffe inkl. Griffschrauben</p>
+                  <p>• Inkl. optionaler Überlaufblenden Chrom und Schwarz</p>
+                  <h4>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</h4>
+                </div>
+              </div>
+            </div>
+            <div class="wholesets1">
+              <div class="imageWholesets">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/bms3.jpg">
+                  <img class="imagewholesets" src="Pictures/PicturesB/Clivia/Badmoebelsets/bms3.jpg">
+                </a>
+                <h2>WASCHTISCHSET MIT SPIEGELSCHRANK 3</h2>
+                <div class="mehrInfo">
+                  <button>
+                    info
+                  </button>
+                </div>
+                <div class="hiddenInfo">
+                  <p>• Waschtisch inkl. Überlauf aus Keramik oder Mineralguss (bzw.; in Breite 1.200mm Einzel- oder Doppel-Waschtisch)</p>
+                  <p>• Korpus für Keramik- und Mineralguss-Wachtisch: 1 Korpus in HGL weiß inkl. Befestigung, 2 Auszüge mit Soft Close</p>
+                  <p>• Fronten für Unterschrank: 2 Fronten inkl. Befestigung</p>
+                  <p>• Griffe inkl. Griffschrauben</p>
+                  <p>• Inkl. optionaler Überlaufblenden Chrom und Schwarz</p>
+                  <h4>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</h4>
+                </div>
+              </div>
+            </div>
+            <div class="wholesets1">
+              <div class="imageWholesets">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/bms4.jpg">
+                  <img class="imagewholesets" src="Pictures/PicturesB/Clivia/Badmoebelsets/bms4.jpg">
+                </a>
+                <h2>WASCHTISCHSET MIT SPIEGELSCHRANK 4</h2>
+                <div class="mehrInfo">
+                  <button>
+                    info
+                  </button>
+                </div>
+                <div class="hiddenInfo">
+                  <p>• Waschtisch inkl. Überlaus aus Keramik oder Mineralguss (bzw.; in Breite 1.200mm als Einzel- oder Doppel-Waschtisch)</p>
+                  <p>• Korpus für Keramik- und Mineralguss-Waschtisch: 1 Korpus in HGL weiß inkl. Befestigung, 3 Auszüge mit Soft-Close</p>
+                  <p>• Fronten für Unterschrank: 3 Fronten inkl. Befestigung</p>
+                  <p>• Griffe inkl. Griffschrauben</p>
+                  <p>• Inkl. optionaler Überlaufblenden Chrom und Schwarz</p>
+                  <h4>• Farben: Weiß, Graphit Grau, Eiche Dark, Sommmereiche</h4>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="wholesets2">
+              <h3>Waschtische zum auswahl</h3>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt1.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt1.jpg">
+                </a>
+                <h4>Waschtisch Keramik<p>• Breite: 600mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt2.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt2.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss<p>• Breite: 600mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt3.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt3.jpg">
+                </a>
+                <h4>Waschtisch Keramik<p>• Breite: 800mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt4.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt4.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss<p>• Breite: 800mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt5.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt5.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss asymmetrisch Ablage links<p>• Breite: 800mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt6.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt6.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss asymmetrisch Ablage rechts<p>• Breite: 800mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt7.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt7.jpg">
+                </a>
+                <h4>Waschtisch Keramik<p>• Breite: 1.000mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt8.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt8.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss<p>• Breite: 1.000mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt9.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt9.jpg">
+                </a>
+                <h4>Doppel-Waschtisch Keramik<p>• Breite: 1.200mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt10.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt10.jpg">
+                </a>
+                <h4>Doppel-Waschtisch Mineralguss<p>• Breite: 1.200mm</p></h4>
+              </div>
+              <div class="imageWholesetswsch">
+                <a href="Pictures/PicturesB/Clivia/Badmoebelsets/wt11.jpg">
+                  <img class="imagewholesetswsch" src="Pictures/PicturesB/Clivia/Badmoebelsets/wt11.jpg">
+                </a>
+                <h4>Waschtisch Mineralguss<p>• Breite: 1.200mm</p></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="chapter">
+          <div class="beispiel" id="beispiel">
+            <h1>badmöbelsets beispiele</h1>
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Waschtischunterschrank: Front mitte Weiß Hochglanz, Front links Sommereiche, Front rechts Eiche dark</p>
+                <p>• Griffe</p>
+                <p>• Tablett als Wandregal: Weiß Hochglanz / Sommereiche / Schwartmatt</p>
+                <p>• LED-Lichtspiegel mit Glasablage</p>
+                <p>• Keramik-Waschtisch</p>    
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp11.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp11.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp12.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp12.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp13.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp13.jpg">
+                </a>
+              </div>
+            </div>
+            
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Waschbecken</p>
+                <p>• Unterschrank, Griff mitte 4, Griff links 2, Griff rechts 1</p>
+                <p>• Füße Schwarzmatt: mitte Weiß Hochglanz, links Weiß Hochglanz, Graphit Grau, rechts Weiß Hochglanz Sommereiche</p>
+                <p>• Tablett als Wandregal: mitte Weiß Hochglanz, Schwartmatt, links Graphit Grau, Schwartmatt, rechts Sommereiche Schwartmatt</p>
+                <p>• LED-Lichtspiegel mit Glasablage</p>   
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp21.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp21.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp22.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp22.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp23.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp23.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 3 Halbhochschränke: mitte Weiß Hochglanz Sommereiche, links Weiß Hochglanz, rechts Weiß Hochglanz Sommereiche</p>
+                <p>• Griffe und Füße Schwartmatt</p>
+                <p>• Würfel: mitte 2 Schwartmatt mit Einlegern in Sommereiche, links 3 Schwartmatt mit Einlegern in Weiß, rechts 2 Schwartmatt mit Einlegern in Sommereiche</p>
+                <p>• Tablett: mitte Schwarz Sommereiche wandhängend montiert, rechts Schwarz Sommmereiche</p>
+                <p>• Regal (rechts) Weiß</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp61.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp61.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp62.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp62.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp63.jpg" target="_blank"></a>
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp63.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank: links Graphit Grau, rechts Sommereiche</p>
+                <p>• Würfel: Schwartmatt </p>
+                <p>• Tablett: Schwarz, wandhängend montiert</p>
+                <p>• Möbelwaschtisch</p>
+                <p>• Spiegelschrank: Weiß Hochglanz, 2 Türen beidseitig verspiegelt</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp31.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp31.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp32.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp32.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschranke Korpus:Weiß Hochglanz, Graphit Grau</p>
+                <p>• Keramikwaschtisch</p>
+                <p>• LED-Spiegelschrank</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp91.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp91.jpg">
+                </a>
+              </div>
+            </div>
+
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 6</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank: links Weiß Hochglanz, rechts Sommereiche und Ablage für Fußgestell</p>
+                <p>• Griffe Fußgestell mit Handtuchhalter</p>
+                <p>• Würfel: Schwartmatt </p>
+                <p>• Tablett: Schwarz, wandhängend montiert</p>
+                <p>• Möbelwaschtisch</p>
+                <p>• Spiegelschrank: Weiß Hochglanz, 2 Türen beidseitig verspiegelt</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp41.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp41.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp42.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp42.jpg">
+                </a>
+              </div>
+            </div>
+
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 7</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank Weiß Hochglanz</p>
+                <p>• Griffleiste</p>
+                <p>• Würfel: Schwartmatt </p>
+                <p>• Tablett: Schwarz, Sommereiche wandhängend montiert</p>
+                <p>• Möbelwaschtisch</p>
+                <p>• Spiegel mit Glasablage</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp51.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp51.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 8</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank: links Weiß Hochglanz, rechts Weiß Hochglanz Sommereiche</p>
+                <p>• Minerallguss-Waschtisch</p>
+                <p>• LED-Spiegelschrank</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp71.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp71.jpg">
+                </a>
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp72.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp72.jpg">
+                </a>
+              </div>
+            </div>
+
+            <div class="imagesBeispiel">
+              <h2>BEISPIEL 9</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Unterschrank:Weiß Hochglanz</p>
+                <p>• Füße schwarz matt</p>
+                <p>• LED-Spiegelschrank</p>
+              </div>
+              <div class="imageBeispiel">
+                <a href="Pictures/PicturesB/Clivia/Beispiele/bsp81.jpg" target="_blank">
+                  <img class="imagebeispiel" src="Pictures/PicturesB/Clivia/Beispiele/bsp81.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div class="footerlogo">
+        <img class="footerimg" src="Pictures/Logo.jpg">
+      </div>
+      <div class="footerlogo">
+        <a href="https://g.co/kgs/Lsmvuj2" target="_blank">
+          <img class="footerimg" src="Pictures/Maps.jpg">
+        </a>
+      </div>
+        <h2>DIE PERLE MODERNE BADGESTALTUNG</h2>
+        <h4>Brockmannstraße 1</h4>
+        <h4>63075, Offenbach am Main</h4>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const infoButtons = document.querySelectorAll('.mehrInfo button');
+        const hiddenInfoElements = document.querySelectorAll('.hiddenInfo');
+    
+        // Function to close all hiddenInfo divs
+        function closeAllHiddenInfo() {
+          hiddenInfoElements.forEach(hiddenInfo => {
+            hiddenInfo.style.display = 'none';
+          });
+        }
+    
+        // Toggle hiddenInfo display on button click
+        infoButtons.forEach(button => {
+          button.addEventListener('click', function (event) {
+            // Prevent the click event from propagating to the document
+            event.stopPropagation();
+    
+            const hiddenInfo = button.closest('.mehrInfo').nextElementSibling;
+            if (hiddenInfo && hiddenInfo.classList.contains('hiddenInfo')) {
+              if (hiddenInfo.style.display === 'block') {
+                hiddenInfo.style.display = 'none'; // Hide if already visible
+              } else {
+                closeAllHiddenInfo(); // Close all other .hiddenInfo divs
+                hiddenInfo.style.display = 'block'; // Show if hidden
+              }
+            }
+          });
+        });
+    
+        // Close hiddenInfo divs when clicking anywhere on the page
+        document.addEventListener('click', function () {
+          closeAllHiddenInfo();
+        });
+      });
+    </script>
+
+  </body>
+</html>

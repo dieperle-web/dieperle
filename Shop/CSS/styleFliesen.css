@@ -1,0 +1,263 @@
+.tableLine {
+  margin-top: 150px;
+}
+
+table {
+  width: 100%;
+  position: relative;
+  border: none;
+  border-collapse: collapse;
+}
+
+.Modell {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Dimensionen {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Finish {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Farbe1 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Farbe2 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Farbe3 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Farbe4 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+}
+
+.Farbe5 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+  border-color: rgb(42, 53, 59);
+}
+
+.Farbe6 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+  border-color: rgb(42, 53, 59);
+}
+
+.Farbe7 {
+  height: 85px;
+  width: 10%;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #0977a3;
+  border-color: rgb(42, 53, 59);
+}
+
+.Farbe1,
+.Farbe2,
+.Farbe3,
+.Farbe4,
+.Farbe5,
+.Farbe6,
+.Farbe7 {
+  width: 10%;
+  height: 30px;
+  background-color: rgb(173, 166, 166);
+  border-color: rgb(42, 53, 59);
+}
+
+.Farbe7 {
+  border-right: solid 4px;
+}
+
+.Fliese {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  width: 100px;
+  height: 60px;
+  background-color: #0977a3;
+  color: rgb(191, 191, 191);
+  border-bottom: solid 1px;
+  border-color: black;
+}
+
+.imageDiv {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  padding: 0%;
+
+  .image {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  .farbeB {
+    font-size: 17px;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    color: black;
+  }
+  .farbeW {
+    font-size: 17px;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    color: beige;
+  }
+}
+
+/*Buttons*/
+.dropdwnbtnD {
+  margin-left: 50px;
+  background-color: rgb(173, 166, 166) 3;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: solid 1px;
+}
+.dropdwnbtnF {
+  margin-left: 50px;
+  background-color: rgb(173, 166, 166);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: solid 1px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdowncontentD {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  min-width: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdowncontentF {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  min-width: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdowncontentD a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdowncontentF a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdowncontentD {
+  display: block;
+  margin-left: 51px;
+}
+.dropdown:hover .dropdowncontentF {
+  display: block;
+  margin-left: 51px;
+}

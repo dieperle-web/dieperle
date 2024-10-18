@@ -1,0 +1,124 @@
+/* Whole Table style*/
+html,
+body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  background-color: #0977a3;
+
+}
+body{
+  display: inline-block;
+}
+header {
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(42, 53, 59);
+  border-top: solid 15px;
+  border-color: #0977a3;
+  margin-top: 0;
+  color: rgb(188, 189, 191);
+  font-family: "Courier New", Courier, monospace padding 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.logoDiv {
+  margin-left: 5%;
+  margin-top: -6px;
+  width: 110px;
+  height: auto;
+  float: left;
+  border: solid 3px;
+  border-color: rgb(188, 189, 191);
+
+  .logo {
+    width: 110px;
+    height: 90px;
+    float: left;
+  }
+}
+
+.linkDiv {
+  margin-left: 5%;
+  margin-top: -6px;
+  width: 110px;
+  height: auto;
+  float: left;
+  border: solid 3px;
+  border-color: rgb(188, 189, 191);
+
+  .fliese {
+    width: 110px;
+    height: 90px;
+    float: left;
+  }
+
+  .bad {
+    width: 110px;
+    height: 90px;
+    float: left;
+  }
+
+  .parkett {
+    width: 110px;
+    height: 90px;
+    float: left;
+  }
+
+  .tuer {
+    width: 110px;
+    height: 90px;
+    float: left;
+  }
+}
+
+main {
+  position:sticky ;
+  width: 100%;
+  display: inline-block;
+}
+main div{
+  float: left;
+}
+
+.footer{
+  position: static;
+  width: 100%;
+  height: 250px;
+  display: inline-block;
+}
+.footer div{
+  margin-top: 30px;
+  width: 30%;
+  float: left;
+}
+.footerlogo{
+  height: 200px;
+}
+.footerimg{
+  height: 200px;
+}
+
+.pickStyle div {
+  display: inline-block;
+}
+.pickClivia,
+.pickDerby,
+.pickWhite {
+  width: 33.1%;
+/*  margin-top: 150px; */
+
+}
+.pickClivia a,
+.pickDerby a,
+.pickWhite a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+}

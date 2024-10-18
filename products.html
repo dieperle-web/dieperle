@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="Public/icon.jpeg" />
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&f[]=literata@301&f[]=epilogue@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>die Perle</title>
+    <style>
+        /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+        /*Document*/
+        /** Use a better box model (opinionated).*/
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+            font-family:
+                system-ui,
+                'Segoe UI',
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif,
+                'Apple Color Emoji',
+                'Segoe UI Emoji';
+            line-height: 1.15; /* 1. Correct the line height in all browsers. */
+            -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+            tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+        }
+
+        /*Sections*/
+
+        body {
+            margin: 0; /* Remove the margin in all browsers. */
+        }
+
+        /*Text-level semantics*/
+
+        /**Add the correct font weight in Chrome and Safari.*/
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /**
+        1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+        2. Correct the odd 'em' font sizing in all browsers.*/
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family:
+                ui-monospace,
+                SFMono-Regular,
+                Consolas,
+                'Liberation Mono',
+                Menlo,
+                monospace; /* 1 */
+            font-size: 1em; /* 2 */
+        }
+
+        /**Add the correct font size in all browsers.*/
+
+        small {
+            font-size: 80%;
+        }
+
+        /**Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.*/
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /*Tabular data*/
+
+        /**Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)*/
+
+        table {
+            border-color: currentcolor;
+        }
+
+        /*Forms*/
+
+        /**1. Change the font styles in all browsers.
+        2. Remove the margin in Firefox and Safari*/
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit; /* 1 */
+            font-size: 100%; /* 1 */
+            line-height: 1.15; /* 1 */
+            margin: 0; /* 2 */
+        }
+
+        /**Correct the inability to style clickable types in iOS and Safari.*/
+
+        button,
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
+            -webkit-appearance: button; /* For Safari */
+            -moz-appearance: button;    /* For Firefox */
+            appearance: button;          /* Standard property */
+        }
+
+        /**Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.*/
+
+        legend {
+            padding: 0;
+        }
+
+        /**Add the correct vertical alignment in Chrome and Firefox.*/
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /**Correct the cursor style of increment and decrement buttons in Safari.*/
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /**1. Correct the odd appearance in Chrome and Safari.
+        2. Correct the outline style in Safari.*/
+
+        [type='search'] {
+            -webkit-appearance: textfield; /* 1 */
+            -moz-appearance: textfield;    /* For Firefox */
+            appearance: textfield;          /* Standard property */
+            outline-offset: -2px; /* 2 */
+        }
+
+        /**Remove the inner padding in Chrome and Safari on macOS.*/
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**1. Correct the inability to style clickable types in iOS and Safari.
+        2. Change font properties to 'inherit' in Safari.*/
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button; /* 1 */
+            font: inherit; /* 2 */
+        }
+
+        /*Interactive*/
+
+        /*Add the correct display in Chrome and Safari.*/
+
+        summary {
+            display: list-item;
+        }
+    </style>
+
+    <style>
+        :root {
+            --clr-backg: #dbeafe;
+            --clr-menu:#0c4a6e;
+            --clr-title: #155e75;
+            --clr-text: #0f172a;
+
+            --size-xxs: 0.5rem;     /* Extra Extra Small */
+            --size-xs: 0.75rem;     /* Extra Small */
+            --size-s: 0.875rem;     /* Small */
+            --size-base: 1rem;      /* Base Size */
+            --size-l: 1.25rem;      /* Large */
+            --size-xl: 1.5rem;      /* Extra Large */
+            --size-2xl: 1.75rem;    /* 2X Extra Large */
+            --size-3xl: 2rem;       /* 3X Extra Large */
+            --size-4xl: 2.5rem;     /* 4X Extra Large */
+            --size-5xl: 3rem;       /* 5X Extra Large */
+            --size-6xl: 3.5rem;     /* 6X Extra Large */
+            --size-7xl: 4rem;       /* 7X Extra Large */
+            --size-8xl: 4.25rem;    /* 8X Extra Large */
+            --size-9xl: 4.375rem;   /* 9X Extra Large */
+            --size-10xl: 4.5rem;    /* 10X Extra Large */
+        }
+
+        * {
+            margin: 0;
+            line-height: calc(1em + 0.5rem);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+            
+        body {
+            font-family: 'Epilogue', sans-serif;
+            font-weight: 400; /* Regular weight */
+            background-color: var(--clr-backg);
+            color: var(--clr-text);
+            text-align: center;
+        }
+            
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+          display: block;
+          max-width: 100%;
+          user-select: none;
+        }
+
+        button {
+          display: inline-block;
+          padding: 0;
+          border: none;
+          background: none;
+          cursor: pointer;
+          color: inherit;
+        }
+
+        h1 {
+          font-family: 'Rosaline', cursive !important;
+          font-size: var(--size-10xl);
+          font-weight: 500;
+          color: var(--clr-title);
+        }
+
+        a {
+          text-decoration: none;
+        }
+    </style>
+
+    <style>
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        position: relative;
+        z-index: 9999;
+      }
+
+      .header {
+        font-family: 'Epilogue', sans-serif;
+        color: var(--clr-menu);
+      }
+
+      .header__logo {
+        margin-left: 1rem;
+        width: 5rem;
+        height: auto ;
+      }
+
+      .header__menu {
+        margin-right: 1rem;
+        display: none;
+      }
+
+      .header__bars{
+        margin-right: 1rem;
+        color: var(--clr-menu);
+        width: 2rem;
+        height:auto;
+        display: block;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        font-family: 'Epilogue', sans-serif;
+        color: var(--clr-text);
+      }
+
+      .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        font-family: 'Epilogue', sans-serif;
+        color: var(--clr-text);
+      }
+
+      .mobile-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr-backg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .mobile-nav__menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+    </style>
+
+    <style>
+      .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.section {
+    margin-top: 5rem;
+}
+
+.section a{
+    color: var(--clr-text);
+    font-family: 'Literata', serif;
+    text-decoration: underline;
+}
+.section a:hover{
+    background-color: var(--clr-menu);
+    color: var( --clr-backg);
+}
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex; /* Ensure the carousel is a flex container */
+    justify-content: center; /* Center carousel itself */
+    align-items: center; /* Center items vertically if necessary */
+    margin: 0 auto; /* Center the carousel horizontally in the page */
+}
+
+.carousel-images,
+.carousel-images-d {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center; /* Center images within the carousel */
+}
+
+.carousel-images img, 
+.carousel-images-d img{
+    width: 22rem;
+    display: none;
+}
+
+.carousel-images img.active,
+.carousel-images-d img.active-d {
+    display: block;
+}
+
+.hero button,
+.products button,
+.dienst button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+button.prev,
+button.prev-d {
+    left: 10px;
+}
+
+button.next,
+button.next-d {
+    right: 10px;
+}
+
+/* Shop Section */
+.shop {
+    text-align: center; /* Center the content */
+    margin-top: 2rem; /* Add some space above the shop section */
+    margin-bottom: 2rem; /* Add space below the shop section */
+}
+
+/* Shop Bag Button */
+.shop_bag {
+    background-color: var(--clr-title); /* Use a variable or specific color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    padding: 20px; /* Vertical and horizontal padding */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    display: inline-flex; /* Inline-flex to center the SVG */
+    align-items: center; /* Center items vertically */
+}
+
+/* Shop Bag Button Hover Effect */
+.shop_bag:hover {
+    background-color: white; /* Darker shade on hover */
+    color: var(--clr-title);
+}
+
+/* SVG Icon inside the Button */
+.shop_bag svg {
+    width: 6rem; /* Size of the SVG */
+    height: 6rem; /* Size of the SVG */
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.modal {
+    display: none; /* Ensure the modal is hidden by default */
+    position: fixed; /* Fixed position for modal */
+    z-index: 1000; /* Place modal on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full screen */
+    height: 100%; /* Full screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background: white; /* White background for modal content */
+    margin: 15% auto; /* Center the modal vertically */
+    padding: 20px;
+    border: 1px solid #888; /* Optional border */
+    width: 80%; /* Width of modal content */
+}
+
+.modal-buttons {
+    display: flex; /* Use flex to align buttons */
+    justify-content: space-around; /* Space between buttons */
+    margin-top: 15px; /* Space above the buttons */
+    gap: 10px; /* Add a gap to reduce space between buttons */
+}
+
+.stay-button,
+.shop-button {
+    background-color: var(--clr-title); /* Use your theme color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    padding: 10px 15px; /* Vertical and horizontal padding */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.stay-button:hover,
+.shop-button:hover {
+    background-color: white; /* Change color on hover */
+    color: var(--clr-title); /* Text color on hover */
+}
+
+.mobile-nav__link{
+    font-size: var(--size-l);
+    color: var(--clr-menu);
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    transition: color 0.3s;
+}
+
+.mobile-nav__link:hover{
+    background-color: var(--clr-menu);
+    color: var( --clr-backg);
+}
+
+.hidden {
+    display: none;
+}
+    
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav.hidden {
+    display: none; /* Hidden state */
+}
+
+h4{
+    color: var( --clr-menu);
+}
+h5{
+    margin-top: 0.7rem;
+    margin-bottom: 1.3rem;
+}
+/* Responsive Design */
+/*xs*/
+@media (min-width: 475px) {
+    h1 {
+        font-size: 4.5rem; /* xs */
+    }
+    h2 {
+        font-size: 1.75rem; /* xs */
+    }
+    h3 {
+        font-size: 0.7rem;/* xs */ 
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    h6 {
+        font-size: 0.7rem;
+    }
+    p {
+        font-size: 1rem; /* xs */
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 7rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+    .stay-button,
+    .shop-button {
+        font-size: 1rem;
+    }
+}
+/*s*/
+@media (min-width: 640px) {
+    h1 {
+        font-size: 5.175rem; /* s */
+    }
+    h2 {
+        font-size: 2.0125rem; /* s */
+    }
+    h3 {
+        font-size: 0.85rem; /* Increase size for small screens */
+        margin-left: 2rem;  /* Adjust margins */
+        margin-right: 2rem; /* Adjust margins */
+    }
+    h4 {
+        font-size: 2.5rem; /* Increase size for s */
+    }
+    h5 {
+        font-size: 1.5rem; /* Increase size for s */
+    }
+    h6 {
+        font-size: 0.9rem; /* Increase size for s */
+    }
+    p {
+        font-size: 1.15rem; /* s */
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+    .carousel-images img,
+    .carousel-images-d img {
+        width: 25.3rem;
+    }
+    .header__logo {
+        width: 5.625rem;
+        height: auto ;
+    }
+    .shop_bag svg {
+        width: 7rem; /* Increase size for small screens */
+        height: 7rem; /* Increase size for small screens */
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 8.05rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+    .mobile-nav__link{
+        font-size: var(--size-xl);
+    }
+    .stay-button,
+    .shop-button {
+        font-size: 1.2rem; /* Increase size for s */
+    }
+}
+
+/*m*/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5.951rem; /* m */
+    }
+    h2 {
+        font-size: 2.313rem; /* m */
+    }
+    h3 {
+        font-size: 1rem; /* Further increase for medium screens */
+        margin-left: 2rem;  /* Adjust margins */
+        margin-right: 2rem; /* Adjust margins */
+    }
+    h4 {
+        font-size: 2.8rem; /* More moderate increase for m */
+    }
+    h5 {
+        font-size: 1.8rem; /* More moderate increase for m */
+    }
+    h6 {
+        font-size: 1rem; /* More moderate increase for m */
+    }
+    p {
+        font-size: 1.322rem; /* m */
+        margin-right: 3.5rem;
+        margin-left: 3.5rem;
+    }
+    .carousel-images img,
+    .carousel-images-d img {
+        width: 29.1rem;
+    }
+    .header__logo {
+        width: 6.25rem;
+        height: auto ;
+    }
+    .header__menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        gap: 2em;
+    }
+    .header__link{
+        font-size: var(--size-l);
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--clr-menu);
+        letter-spacing: -0.05rem;
+        transition: color 0.3s;
+    }
+    .header__link:hover {
+        background-color: var(--clr-menu);
+        color: var( --clr-backg);
+    } 
+    .header__bars {
+        display: none;
+    }
+    .mobile-nav {
+        display: none; /* Ensure mobile nav is hidden on larger screens */
+    }
+    .shop_bag svg {
+        width: 8rem; /* Increase size for medium screens */
+        height: 8rem; /* Increase size for medium screens */
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 9.24rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+    .stay-button,
+    .shop-button {
+        font-size: 1.3rem; /* More moderate increase for m */
+    }
+}
+
+/*l*/
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 6.843rem; /* l */
+    }
+    h2 {
+        font-size: 2.663rem; /* l */
+    }
+    h3 {
+        font-size: 1.125rem; /* Increase size for large screens */
+        margin-left: 3rem;  /* Adjust margins */
+        margin-right: 3rem; /* Adjust margins */
+    }
+    h4 {
+        font-size: 3rem; /* Increase size for l */
+    }
+    h5 {
+        font-size: 2rem; /* Increase size for l */
+    }
+    h6 {
+        font-size: 1.1rem; /* Increase size for l */
+    }
+    p {
+        font-size: 1.520rem; /* l */
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    .carousel-images img,
+    .carousel-images-d img {
+        width: 33.5rem;
+    }
+    .header__logo {
+        width: 6.875rem;
+        height: auto ;
+    }
+    .header__link{
+        font-size: var(--size-xl);
+    }
+    .shop_bag svg {
+        width: 9rem; /* Increase size for large screens */
+        height: 9rem; /* Increase size for large screens */
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 10.63rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+}
+
+/*xl*/
+@media (min-width: 1280px) {
+    h1 {
+        font-size: 7.871rem; /* xl */
+    }
+    h2 {
+        font-size: 3.065rem; /* xl */
+    }
+    h3 {
+        font-size: 1.25rem; /* Increase size for extra large screens */
+        margin-left: 4rem;  /* Adjust margins */
+        margin-right: 4rem; /* Adjust margins */
+    }
+    h4 {
+        font-size: 3.2rem; /* Increase size for xl */
+    }
+    h5 {
+        font-size: 2.2rem; /* Increase size for xl */
+    }
+    h6 {
+        font-size: 1.2rem; /* Increase size for xl */
+    }
+    p {
+        font-size: 1.749rem; /* xl */
+        margin-right: 7rem;
+        margin-left: 7rem;
+    }
+    .carousel-images img,
+    .carousel-images-d img {
+        width: 38.6rem;
+    }
+    .header__logo {
+        width: 7.5rem;
+        height: auto ;
+    }
+    .header__link{
+        font-size: var(--size-2xl);
+    }
+    .shop_bag svg {
+        width: 10rem; /* Increase size for extra large screens */
+        height: 10rem; /* Increase size for extra large screens */
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 12.13rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+    .stay-button,
+    .shop-button {
+        font-size: 1.4rem; /* More moderate increase for m */
+    }
+}
+
+/*xxl*/
+@media (min-width: 1536px) {
+    h1 {
+        font-size: 9.030rem; /* xxl */
+    }
+    h2 {
+        font-size: 3.517rem; /* xxl */
+    }
+    h3 {
+        font-size: 1.5rem; /* Increase size for extra extra large screens */
+        margin-left: 5rem;  /* Adjust margins */
+        margin-right: 5rem; /* Adjust margins */
+    }
+    h4 {
+        font-size: 3.7rem; /* Increase size for xxl */
+    }
+    h5 {
+        font-size: 2.4rem; /* Increase size for xxl */
+    }
+    h6 {
+        font-size: 1.6rem; /* Increase size for xxl */
+    }
+    p {
+        font-size: 2.011rem; /* xxl */
+        margin-right: 10rem;
+        margin-left: 10rem;
+    }
+    .carousel-images img,
+    .carousel-images-d img {
+        width: 44.3rem;
+    }
+    .header__logo {
+        width: 8.125rem;
+        height: auto ;
+    }
+    .header__link{
+        font-size: var(--size-4xl);
+    }
+    .shop_bag svg {
+        width: 11rem; /* Increase size for extra extra large screens */
+        height: 11rem; /* Increase size for extra extra large screens */
+    }
+    /* Maps Image */
+    .footerimg {
+        width: 13.82rem;
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+    .stay-button,
+    .shop-button {
+        font-size: 1.8rem; /* More moderate increase for m */
+    }
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <header class="header container">
+
+        <div class="header__logo">
+              <img src="Public/Logo.jpg" alt="Logo"/>
+          </div>
+
+      <nav>
+        <ul class="header__menu">
+          <li><a class="header__link" href="index.html">Home</a></li>
+          <li><a class="header__link" href="">Produkte</a></li>
+          <li><a class="header__link" href="about.html">Über uns</a></li>
+          <li><a class="header__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="header__bars" onclick="toggleMobileNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- mobile nav -->
+    <div class="mobile-nav hidden">
+        <nav>
+          <ul class="mobile-nav__menu">
+            <li><a class="mobile-nav__link" href="index.html">Home</a></li>
+            <li><a class="mobile-nav__link" href="">Produkte</a></li>
+            <li><a class="mobile-nav__link" href="about.html">Über uns</a></li>
+            <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+     <!--- end of mobile nav -->
+
+    <main>
+        <section class="products container">
+        <h2>Unsere Produkte</h2>
+          <div class="carousel">
+            <div class="carousel-images">
+              <img src="Public/pic1.jpeg" alt="Image 1" class="active">
+              <img src="Public/pic2.jpeg" alt="Image 2">
+              <img src="Public/pic3.jpeg" alt="Image 3">
+              <img src="Public/pic4.jpeg" alt="Image 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+          </div>
+          <br>
+          <p>Badezimmereinrichtungen</p>
+          <h3>Erleben Sie Komfort und Stil mit unseren sorgfältig ausgewählten Badezimmereinrichtungen. Von luxuriösen Badewannen über elegante Waschbecken bis hin zu modernen Duschkabinen – wir bieten Ihnen alles, was Sie brauchen, um Ihr Badezimmer in eine Oase der Entspannung zu verwandeln. Unsere Produkte vereinen Design und Funktionalität, um Ihnen ein harmonisches Ambiente zu schaffen.</h3>
+          <p>Fliesen</p>
+          <h3>Unsere hochwertigen Fliesen sind der perfekte Ausgangspunkt für ein stilvolles und modernes Badezimmer. Mit einer Vielzahl von Designs, Farben und Texturen bieten wir Ihnen die Möglichkeit, kreative Akzente zu setzen und Ihrem Raum eine individuelle Note zu verleihen. Egal, ob Sie eine zeitlose Eleganz oder einen trendigen Look bevorzugen, unsere Fliesen verbinden Ästhetik und Funktionalität.</h3>
+          <p>Bodenlösungen</p>
+          <h3>Unsere Bodenlösungen bieten eine hervorragende Kombination aus Stil und Langlebigkeit. Wählen Sie aus einer breiten Palette von Parkett, Laminat und Vinyl, die nicht nur optisch ansprechend sind, sondern auch den Anforderungen des Alltags standhalten. Egal, ob Sie einen warmen, natürlichen Look oder einen modernen, pflegeleichten Boden wünschen, wir haben die richtige Lösung für jeden Raum.</h3>
+          <p>Innentüren</p>
+          <h3>Vervollständigen Sie Ihr Zuhause mit unseren eleganten Innentüren, die sowohl funktional als auch ästhetisch sind. Unsere Designs passen zu jedem Raum und tragen zur Schaffung einer einladenden Atmosphäre bei. Mit einer Vielzahl von Stilen und Oberflächen bieten wir Ihnen die Möglichkeit, die perfekte Tür auszuwählen, die Ihren persönlichen Geschmack und den Charakter Ihres Zuhauses widerspiegelt.</h3>
+
+          
+        </section>
+
+        <section class="dienst container section" id="dienst">
+            <h2>Dienstleistungen</h2>
+            <div class="carousel">
+                <div class="carousel-images-d">
+                  <img src="Public/elektro.jpg" alt="Elektroarbeiten" class="active-d">
+                  <img src="Public/Duscheneinbau.jpg" alt="Duscheneinbau">
+                  <img src="Public/Fliesen-verlegen.jpg" alt="Fliesen-verlegen">
+                  <img src="Public/laminat-verlegen.jpg" alt="Laminat-verlegen">
+                  <img src="Public/tuer-einbauen.jpeg" alt="Türeinbauen">
+                </div>
+                <button class="prev-d" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next-d" onclick="changeSlide(1)">&#10095;</button>
+              </div>
+            <br>
+            <p>Neben unserer erstklassigen Produktpalette bieten wir Ihnen erstklassige, professionelle Installationsservices, die auf höchste Präzision und Sorgfalt ausgelegt sind.</p>
+            <br>
+            <p>Unser erfahrenes Team von Fachleuten und Subunternehmern arbeitet eng mit Ihnen zusammen, um Ihre Vorstellungen mühelos und nahtlos umzusetzen. Wir legen großen Wert auf Detailgenauigkeit und Qualität in jeder Phase der Installation, damit Ihr Raum nicht nur funktional, sondern auch ästhetisch ansprechend ist.</p>  
+            <br>
+            <p>Vertrauen Sie darauf, dass wir Ihre Wünsche mit Leidenschaft und Expertise realisieren, um ein Ergebnis zu erzielen, das Ihre Erwartungen übertrifft.</p>
+        </section>
+        <section class="container section shop">
+            <button class="shop_bag" onclick="openModal('shopModal')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clipRule="evenodd" />
+                </svg>
+            </button>
+            <!-- Modal Structure -->
+            <div class="modal hidden" id="shopModal">
+                <div class="modal-content">
+                    <h4>ACHTUNG!</h4>
+                    <h5>Hinweis: Für eine optimale Nutzung und das beste Design unseres Shops empfehlen wir die Verwendung eines Laptops oder PCs.</h5>
+                    <h6>Auf den nächsten Seiten können Sie lediglich eine Auswahl unserer Produkte sehen, jedoch keine Bestellungen oder Käufe vornehmen.</h6>
+                    <div class="modal-buttons">
+                        <button class="stay-button" onclick="closeModal('shopModal')">STAY HERE</button>
+                        <button class="shop-button" onclick="location.href='Shop/fliese.html'; closeModal('shopModal');">SHOP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section" id="contact">
+            <h2>Contact Us</h2>
+            <!-- E-Mail Placeholder -->
+            <p><a href="mailto:info@dieperle-badgestaltung.com">info@dieperle-badgestaltung.com</a></p> <br>
+            <!-- Google Maps Image with Link -->
+            <p>Finde uns hier:</p>
+            <a href="<https://g.co/kgs/Lsmvuj2>" target="_blank">
+              <img class="footerimg" src="Public/Maps.jpg" alt="Google Maps Location">
+            </a> <br>
+            <!-- Company Address -->
+            <p>Brockmannstraße 1, 63075 Offenbach am Main</p>
+            <br>
+          </section>
+
+      </main>
+      <footer><p>&copy; ychyya! All Rights Reserved.</p></footer>
+
+      <script>
+        // Carousel for Products
+        let currentProductSlide = 0;
+        function showProductSlide(index) {
+            const productSlides = document.querySelectorAll('.carousel-images img');
+            if (index >= productSlides.length) {
+                currentProductSlide = 0;
+            } else if (index < 0) {
+                currentProductSlide = productSlides.length - 1;
+            } else {
+                currentProductSlide = index;
+            }
+            productSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === currentProductSlide) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+        function changeProductSlide(direction) {
+            showProductSlide(currentProductSlide + direction);
+        }
+        // Automatically change product slides every 3 seconds
+        setInterval(() => {
+            showProductSlide(currentProductSlide + 1);
+        }, 3000);
+        // Initialize the product carousel
+        showProductSlide(currentProductSlide);
+        // Carousel for Dienstleistungen
+        let currentServiceSlide = 0;
+        function showServiceSlide(index) {
+            const serviceSlides = document.querySelectorAll('.carousel-images-d img');
+            if (index >= serviceSlides.length) {
+                currentServiceSlide = 0;
+            } else if (index < 0) {
+                currentServiceSlide = serviceSlides.length - 1;
+            } else {
+                currentServiceSlide = index;
+            }
+            serviceSlides.forEach((slide, i) => {
+                slide.classList.remove('active-d');
+                if (i === currentServiceSlide) {
+                    slide.classList.add('active-d');
+                }
+            });
+        }
+        function changeServiceSlide(direction) {
+            showServiceSlide(currentServiceSlide + direction);
+        }
+        // Automatically change service slides every 3 seconds
+        setInterval(() => {
+            showServiceSlide(currentServiceSlide + 1);
+        }, 3000);
+        // Initialize the service carousel
+        showServiceSlide(currentServiceSlide);
+      </script>
+      
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+  
+    <script>
+        function toggleMobileNav() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('hidden'); // This will toggle the class to show/hide the mobile nav
+        }
+    </script>
+
+    </body>
+  </html>
+  

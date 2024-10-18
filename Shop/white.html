@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="Pictures/Bad.jpg"/>
+        <title>DB - Bad (White)</title>
+        <style>
+                /* Whole Table style */
+      html, body {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        background-color: #0977a3;
+      }
+
+      body {
+        display: inline-block;
+      }
+
+      header {
+        height: auto;
+        width: 100%;
+        position: relative;
+        top: 0;
+        z-index: 999;
+        background-color: rgb(42, 53, 59);
+        border-top: solid 15px;
+        border-color: #0977a3;
+        margin-top: 0;
+        color: rgb(188, 189, 191);
+        font-family: "Courier New", Courier, monospace;
+        padding: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .logoDiv {
+        margin-left: 5%;
+        margin-top: -6px;
+        width: 110px;
+        height: auto;
+        float: left;
+        border: solid 3px;
+        border-color: rgb(188, 189, 191);
+      }
+
+      .logo {
+        width: 110px;
+        height: 90px;
+        float: left;
+      }
+
+      .linkDiv {
+        margin-left: 5%;
+        margin-top: -6px;
+        width: 110px;
+        height: auto;
+        float: left;
+        border: solid 3px;
+        border-color: rgb(188, 189, 191);
+      }
+
+      .fliese,
+      .bad,
+      .parkett,
+      .tuer {
+        width: 110px;
+        height: 90px;
+        float: left;
+      }
+
+      main {
+        position: sticky;
+        width: 100%;
+        display: inline-block;
+      }
+
+      main div {
+        float: left;
+      }
+
+      .footer {
+        position: static;
+        width: 100%;
+        height: 250px;
+        display: inline-block;
+      }
+
+      .footer div {
+        margin-top: 30px;
+        width: 30%;
+        float: left;
+      }
+
+      .footerlogo {
+        height: 200px;
+      }
+
+      .footerimg {
+        height: 200px;
+      }
+
+      .pickStyle div {
+        display: inline-block;
+      }
+
+      .pickClivia,
+      .pickDerby,
+      .pickWhite {
+        width: 33.1%;
+      }
+
+      .pickClivia a,
+      .pickDerby a,
+      .pickWhite a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        font-size: 25px;
+      }
+
+      /*BUTTON FOR INFO*/
+      .mehrInfo{
+            float: inline-start;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        
+        .hiddenInfo {
+            display: none;
+            position: fixed; /* Use fixed positioning to keep it in place relative to the viewport */
+            left: 50%;       /* Center horizontally */
+            top: 50%;        /* Center vertically */
+            width: 50vw;     /* 50% of the viewport width */
+            padding: 10px;   /* Optional: add padding for better readability */
+            border: solid 3px;
+            background-color: white;
+            color: black;
+            transform: translate(-50%, -50%); /* Adjust position to center the element */
+            z-index: 1000;   /* Ensures the div stays on top of other elements */
+        }
+    
+        button:hover {
+            color: #001F3F;
+            background-color: #fff;
+        }
+    
+        button {
+            transition: all .5s ease;
+            color: #fff;
+            border: 3px solid rgb(58, 61, 71);;
+            font-family:'Montserrat', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+            background-color : transparent;
+            padding: 10px;
+            outline: none;
+            border-radius: 4px;
+        }
+    
+        /* MAIN STYLE */
+        .styles{
+            border-bottom: solid 2px;
+            border-color: black;
+        }
+        .pickWhite {
+            background-color: beige;
+        }
+        .menu{
+            width: 25.5%;
+            background-color: rgb(42, 53, 59);
+        }
+        .title{
+            margin-left: 1.5%;
+            width: 100%;
+        }
+        .title a{
+            text-decoration: none;
+            color: blanchedalmond;
+            font-size: 10px;
+        }
+        .title h2{
+            text-decoration: underline;
+        }
+        .leer{
+            float: left;
+            width: 1.5%;
+        }
+        .content{
+            float: left;
+            width:71%;
+        }
+        .content h1{
+            color: rgb(58, 61, 71);
+            font-size: 25px;
+            text-transform: uppercase;
+            text-decoration:underline overline;
+        }
+        .content h2{
+            font-size: 15px;
+        }
+        .chapter{
+            width: 100%;
+            border-bottom: solid 1px;
+        }
+    
+        /* First part */
+        .farbe{
+            width: 100%;
+        }
+        .griffe{
+            width: 100%;
+        }
+        .fuesgestelle{
+            width: 100%;
+        }
+        .imageFarbe{
+            width: 25%;
+        }
+        .imagesize1{
+            width: 90px;
+            height: 52px;
+        }
+        .imageGriff{
+            width:20%;
+        }
+    
+        /* Second part */
+        .hochschraenke{
+            width: 100%;
+        }
+        .imageHsch{
+            width: 25%;
+        }
+        .imagehsch{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .oberschraenk{
+            width: 100%;
+        }
+        .imageOberschraenk{
+            width: 25%;
+        }
+        .imageoberschraenk{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .unterschraenk{
+            width: 100%;
+        }
+        .imageUnterschraenk{
+            width: 25%;
+        }
+        .imageunterschraenk{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .regale{
+            width: 100%;
+        }
+        .imageRegale{
+            width: 25%;
+        }
+        .imageregale{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .imageAbdeck{
+            width: 25%;
+        }
+        .imageabdeck{
+            width: 220px;
+            height: 110px;
+        }
+    
+        .spiegelsch{
+            width: 100%;
+        }
+        .imageSpiegelsch{
+            width: 25%;
+        }
+        .imagespiegelsch{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .seitensch {
+            width: 100%;
+            text-align: center; /* Center text and elements inside .beispiel */
+            position: relative; /* Position relative for absolute positioning of .hiddenInfo */
+        }
+        .imagesSeitensch {
+            display: flex; /* Use flexbox to align images horizontally */
+            justify-content: center; /* Center images horizontally */
+            gap: 10px; /* Optional: add space between images */
+            margin-top: 20px; /* Add margin to separate from hiddenInfo */
+        }
+        .imageSeitensch {
+            display: flex; /* Ensures the image container uses flexbox */
+            justify-content: center; /* Center images within the container */
+        }
+        .imageseitensch {
+            width: 150px;
+            height: 110px;
+        }
+        .imageseitensch2{
+            width: 170px;
+            height: 110px;
+        }
+        .imageseitensch3{
+            width: 200px;
+            height: 110px;
+        }
+    
+        .wtuint{
+            width: 100%;
+        }
+        .imageWtuint{
+            width: 25%;
+        }
+        .imagewtuint{
+            width: 150px;
+            height: 110px;
+        }
+    
+        .wtschohne{
+            width: 100%;
+        }
+        .imageWtschohne{
+            width: 25%;
+        }
+        .imagewtschohne{
+            width: 150px;
+            height: 110px;
+        }
+        .imagewtschohne2{
+            width: 170px;
+            height: 110px;
+        }
+        .imagewtschohne3{
+            width: 200px;
+            height: 110px;
+        }
+    
+        .zubehoer{
+            width: 100%;
+        }
+        .imageZubehoer{
+            width: 25%;
+        }
+        .imagezubehoer{
+            width: 220px;
+            height: 110px;
+        }
+        .wtsch{
+            width: 100%;
+        }
+        .imageWtsch{
+            width: 32%;
+        }
+        .imagewtsch{
+            width: 150px;
+            height: 110px;
+        }
+
+        </style>
+    </head>
+
+  <body>
+    <header>
+      <div class="headerLine">
+        <div class="logoDiv">
+          <a href="../index.html" target="_blank">
+            <img class="logo" src="Pictures/Logo.jpg" />
+          </a>
+        </div>
+
+        <div class="linkDiv">
+          <a href="fliese.html" target="_blank">
+            <img class="fliese" src="Pictures/Fliese.jpg" />
+          </a>
+        </div>
+
+        <div class="linkDiv">
+          <a href="parkett.html" target="_blank">
+            <img class="parkett" src="Pictures/Parkett.jpg" />
+          </a>
+        </div>
+
+        <div class="linkDiv">
+          <a href="tuer.html" target="_blank">
+            <img class="tuer" src="Pictures/Tuer.jpg" />
+          </a>
+        </div>
+        <h1>die Perle</h1>
+        <h5>MODERNE BADGESTALTUNG</h5>
+      </div>
+    </header>
+
+    <div class="styles">
+      <div class="pickStyle">
+        <div class="pickClivia">
+          <a href="clivia.html" target="_blank"><h3>CLIVIA</h3></a>
+        </div>
+        <div class="pickDerby">
+          <a href="derby.html" target="_blank"><h3>DERBY</h3></a>
+        </div>
+        <div class="pickWhite">
+          <a href="white.html" target="_blank"><h3>WHITE</h3></a>
+        </div>
+      </div>
+    </div>
+  
+    <main>
+
+      <div class="menu">
+        <div class="title">
+          <ul>
+            <a href="#farbe">
+            <li><h2>Farben</h2></li>
+            </a> 
+            <a href="#griffe">
+              <li><h2>Griffe</h2></li>
+            </a>
+            <a href="#hochschraenke">
+              <li><h2>Hochschränke</h2></li>
+            </a>
+            <a href="#kofferschraenk">
+             <li> <h2>Koffertürenschrank</h2></li>
+            </a>
+            <a href="#oberschraenk">
+              <li><h2>Oberschrank, Unterschrank, Abdeckplatte</h2></li>
+            </a>
+            <a href="#regale">
+              <li><h2>Regale</h2></li>
+            </a>
+            <a href="#spiegelsch">
+              <li><h2>Spiegelschränke und Spiegel</h2></li>
+            </a>
+            <a href="#seitensch">
+             <li><h2>Seitenschränke</h2></li>
+            </a>
+            <a href="#wtuint">
+              <li><h2>Waschtischunterschränke für integrierten Waschtisch</h2></li>
+            </a>
+            <a href="#wtschohne">
+              <li><h2>Waschtischunterschränke ohne Abdeckplatte für Aufsatzschalen</h2></li>
+            </a>
+            <a href="#zubehoer">
+              <li><h2>Zubehör</h2></li>
+            </a>
+            <a href="#wtsch">
+              <li><h2>Waschtische aus Mineralstoff</h2></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leer">
+        <p></p>
+      </div>
+
+      <div class="content">
+
+        <div class="chapter">
+          <div class="farbe" id="farbe">
+            <h1>farben</h1>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg11.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg11.jpg"/>
+              </a>
+              <h2>Weiß matt PG 1<p>Korpus: Weiß matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg12.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg12.jpg"/>
+              </a>
+              <h2>Kement matt PG 1<p>Korpus: Kement matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg13.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg13.jpg"/>
+              </a>
+              <h2>Graphit matt PG 1<p>Korpus: Graphit matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg14.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg14.jpg"/>
+              </a>
+              <h2>Braun matt PG 1<p>Korpus: Braun matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg15.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg15.jpg"/>
+              </a>
+              <h2>Schwarz matt PG 1<p>Korpus: Schwarz matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg16.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg16.jpg"/>
+              </a>
+              <h2>Salbei grün matt PG 1<p>Korpus: Salbei grün matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg17.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg17.jpg"/>
+              </a>
+              <h2>Perle matt PG 1<p>Korpus: Perle matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg18.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg18.jpg"/>
+              </a>
+              <h2>Blau Denim matt PG 1<p>Korpus: Blau Denim matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg19.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg19.jpg"/>
+              </a>
+              <h2>Elfenbein matt PG 1<p>Korpus: Elfenbein matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg110.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg110.jpg"/>
+              </a>
+              <h2>Rubinrot matt PG 1<p>Korpus: Rubinrot matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg111.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg111.jpg"/>
+              </a>
+              <h2>Beton matt PG 1<p>Korpus: Beton matt</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg21.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg21.jpg"/>
+              </a>
+              <h2>Weiß Hochglanz PG 2<p>Korpus: Weiß Hochglanz</p></h2>
+            </div>
+            <div class="imageFarbe">
+                <a href="Pictures/PicturesB/White/Fronten/pg21.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/white/Fronten/pg21.jpg"/>
+              </a>
+              <h2>Weiß Hochglanz PG 3<p>Korpus: Weiß Hochglanz</p></h2>
+            </div>
+            <div class="mehrInfo">
+              <button>
+                info
+              </button>
+            </div>
+            <div class="hiddenInfo">
+              <p>• PREISGRUPPE 1: Matt lackiert</p>
+              <p>• Frontaufbau Lack Matt (von innen nach außen: MDF-Trägerplatte | Isoliergrund | Füller | Farblack)</p>
+              <p>• Korpus Lack: lackiert</p>
+              <p>• PREISGRUPPE 2: Glänzend lackiert</p>
+              <p>• Frontaufbau Lack glänzend (von innen nach außen: MDF-Trägerplatte | Isoliergrund | Füller | Farblack | Hochglanz)</p>
+              <p>• Korpus Lack: lackiert</p>
+              <p>• PREISGRUPPE 3: Furniert</p>
+              <p>• Aufbau furniert (E1-Spanplatte | Echtholz-Furnierbeschichtung | Dickkante umlaufend)</p>
+              <p>• Dekorverlauf: Horizontal bei Hochschränken, halbhohen Schränken, Oberschränken, Sideboards, Unterschränken und Waschtischunterschränken</p>
+              <p>• Bei Dekoren kein gleichmäßig durchlaufendes Dekorbild möglichkeit. Aus materialtechnischen Gründen sind leichte Farbabweichungen zwischen Front und Korpus möglich.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="griffe" id="griffe">
+            <h1>griffe</h1>
+            <div class="imageGriff">
+                <a href="Pictures/PicturesB/Derby/Griffe/TipOn.jpg" target="_blank">
+                <img class="imagesize1" src="Pictures/PicturesB/Derby/Griffe/TipOn.jpg" />
+              </a>
+              <h2>TipOn</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+              </div>
+            </div>
+            <div class="imageGriff">
+                <a href="Pictures/PicturesB/White/Griffe/Griff1.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/White/Griffe/Griff1.jpg" />
+              </a>
+              <h2>Griff 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 400mm</p>
+                <p>• Bohabstand: 170mm</p>
+                <p>• Passend zu: Schrank mit einer Tür und Schrank mit Tür und Schublade</p>
+                <p>• Ausrichtung: vertikal</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/White/Griffe/Griff2.jpg" target="_blank">
+                <img class="imagesize1"ssrc="Pictures/PicturesB/White/Griffe/Griff2.jpg" />
+              </a>
+              <h2>Griff 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 140mm</p>
+                <p>• Bohabstand: 80mm</p>
+                <p>• Passend zu: Waschtischuntereschrank bzw. Seitenschrank oberer Auszug</p>
+                <p>• Ausrichtung: horizontal</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/White/Griffe/Griff3.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/White/Griffe/Griff3.jpg" />
+              </a>
+              <h2>Griff 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 400mm</p>
+                <p>• Bohabstand: 170mm</p>
+                <p>• Passend zu: Hochschrank mit Ablage </p>
+                <p>• Ausrichtung: vertikal</p>
+                <p>• Farben: Standard: Schwarz Matt</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/White/Griffe/Griff4.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/White/Griffe/Griff4.jpg" />
+              </a>
+              <h2>Griff 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 140mm</p>
+                <p>• Bohabstand: 80mm</p>
+                <p>• Passend zu: Waschtischuntereschrank bzw. Seitenschrank unterer Auszug</p>
+                <p>• Ausrichtung: horizontal mittig</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/White/Griffe/Griff5.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/White/Griffe/Griff5.jpg" />
+              </a>
+              <h2>Griff 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 60mm</p>
+                <p>• Passend zu: Spiegelschrank</p>
+                <p>• Ausrichtung: horizontal</p>
+                <p>• Farben: Standard: Schwarz Matt, Weiß</p>
+              </div>
+            </div>
+            <div class="imageGriff">
+              <a href="Pictures/PicturesB/White/Griffe/Griff6.jpg" target="_blank">
+                <img class="imagesize1"src="Pictures/PicturesB/White/Griffe/Griff6.jpg" />
+              </a>
+              <h2>Griff 6</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Länge: 180mm</p>
+                <p>• Bohrabstand: 80mm</p>
+                <p>• Passend zu: Schränken mit zwei Türen</p>
+                <p>• Ausrichtung: vertikal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="hochschraenke" id="hochschraenke">
+            <h1>hochschränke</h1>
+            <div class="imageHsch">
+              <a href="Pictures/PicturesB/White/Hochschraenke/hh1.jpg" target="_blank">
+                <img class="imagehsch"src="Pictures/PicturesB/White/Hochschraenke/hh1.jpg" />
+              </a>
+              <h2>Hochschrank 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 4 Glasablagen</p>
+                <p>• 1 Tür (bzw.:innen verspiegelt)</p>
+                <p>• Dimensionen: H 1.500mm x T 300mm x 400mm</p>
+              </div>
+            </div>
+            <div class="imageHsch">
+              <a href="Pictures/PicturesB/White/Hochschraenke/hh2.jpg" target="_blank">
+                <img class="imagehsch"src="Pictures/PicturesB/White/Hochschraenke/hh2.jpg" />
+              </a>
+              <h2>Hochschrank 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Tür oben</p>
+                <p>• 2 Glasablagen</p>
+                <p>• Wäschekorb mit Klappe unten</p>
+                <p>• Dimensionen: H 1.500mm x T 300mm x 400mm</p>
+              </div>
+            </div>
+            <div class="imageHsch">
+              <a href="Pictures/PicturesB/White/Hochschraenke/hh3.jpg" target="_blank">
+                <img class="imagehsch"src="Pictures/PicturesB/White/Hochschraenke/hh3.jpg" />
+              </a>
+              <h2>Hochschrank 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 2 Türen</p>
+                <p>• 3 Glasablagen</p>
+                <p>• Dimensionen: H 1.500mm x T 300mm x 400mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="kofferschraenk" id="kofferschraenk">
+            <h1>koffertürenschrank</h1>
+            <div class="imageHsch">
+              <a href="Pictures/PicturesB/White/Hochschraenke/hh4.jpg" target="_blank">
+                <img class="imagehsch"src="Pictures/PicturesB/White/Hochschraenke/hh4.jpg" />
+              </a>
+              <h2>Koffertürenschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 verpiegelte Tür</p>
+                <p>• 5 (bzw.: 10) Regalböden</p>
+                <p>• Innen Grau</p>
+                <p>• Dimensionen: H 1.500mm x T 250mm x 520mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="oberschraenk" id="oberschraenk">
+            <h1>oberschrank, unterschrank, abdeckplatte</h1>
+            <div class="imageOberschraenk">
+              <a href="Pictures/PicturesB/White/Regal/r7.jpg" target="_blank">
+                <img class="imageoberschraenk" src="Pictures/PicturesB/White/Regal/r7.jpg">
+              </a>
+              <h2>Oberschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 1 Tür</p>
+                <p>• 2 Glasablagen</p>
+                <p>• Dimensionen: H 800mm x T 300mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageUnterschraenk">
+              <a href="Pictures/PicturesB/White/Regal/r1.jpg" target="_blank">
+                <img class="imageunterschraenk" src="Pictures/PicturesB/White/Regal/r1.jpg">
+              </a>
+              <h2>Unterschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Bodenstehend  bwz. Wandhängend</p>
+                <p>• ohne Abdeckplatte, ohne Sockel</p>
+                <p>• 1 Tür mit integrierter Griffkante</p>
+                <p>• 2 Glasablagen</p>
+                <p>• Dimensionen: H 780mm x T 300mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageAbdeck">
+              <a href="Pictures/PicturesB/White/Regal/r2.jpg" target="_blank">
+                <img class="imageabdeck" src="Pictures/PicturesB/White/Regal/r2.jpg">
+              </a>
+              <h2>Abdeckplatte</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Abdeckplatten für bodenstehende Möbel</p>
+                <p>• Dimensionen: H 401 / 801 / 1.201 / 1.601 / 2.001mm x T 280mm x B 19mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="regale" id="regale">
+            <h1>regale</h1>
+            <div class="imageRegale">
+              <a href="Pictures/PicturesB/White/Regal/r3.jpg" target="_blank">
+                <img class="imageregale" src="Pictures/PicturesB/White/Regal/r3.jpg">
+              </a>
+              <h2>Regal 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Offenes Fach mit 45° Gehrung</p>
+                <p>• Dimensionen: H 400mm x T 160mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageRegale">
+              <a href="Pictures/PicturesB/White/Regal/r4.jpg" target="_blank">
+                <img class="imageregale" src="Pictures/PicturesB/White/Regal/r4.jpg">
+              </a>
+              <h2>Regal 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Offenes Fach mit 45° Gehrung</p>
+                <p>• Dimensionen: H 200mm x T 160mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageRegale">
+              <a href="Pictures/PicturesB/White/Regal/r5.jpg" target="_blank">
+                <img class="imageregale" src="Pictures/PicturesB/White/Regal/r5.jpg">
+              </a>
+              <h2>Regal 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Offenes Fach mit seitlicher Öffnung und 45° Gehrung</p>
+                <p>• Dimensionen: H 400mm x T 160mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageRegale">
+              <a href="Pictures/PicturesB/White/Regal/r6.jpg" target="_blank">
+                <img class="imageregale" src="Pictures/PicturesB/White/Regal/r6.jpg">
+              </a>
+              <h2>Regal 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Offenes Fach mit seitlicher Öffnung und 45° Gehrung</p>
+                <p>• Dimensionen: H 200mm x T 160mm x B 400mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="spiegelsch" id="spiegelsch">
+            <h1>spiegelschränke und spiegel</h1>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/ss1.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/ss1.jpg">
+              </a>
+              <h2>Spiegelschrank 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Griff in Schwarz oder Weiß, Aufputz- oder Unterputzmontage</p>
+                <p>• 1 doppelt verspiegelte Tür Anschlag rechts oder links</p>
+                <p>• Horizontale LED - LED-Beleuchtung, Lichttemperatur-Steuerung: Kalt- / Warmweiß, Lichtsteuerung innen 2.700 - 6.000K</p>
+                <p>• 1 Doppelsteckdose</p>
+                <p>• 2 USB- Ansclüsse</p>
+                <p>• 2 Glaseinlegeboden</p>
+                <p>• Dimensionen: H 800mm x T 150mm x B 400mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/ss2.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/ss2.jpg">
+              </a>
+              <h2>Spiegelschrank 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Griff in Schwarz oder Weiß, Aufputz- oder Unterputzmontage</p>
+                <p>• 2 doppelt verspiegelte Türen</p>
+                <p>• Horizontale LED - LED-Beleuchtung, Lichttemperatur-Steuerung: Kalt- / Warmweiß, Lichtsteuerung innen 2.700 - 6.000K</p>
+                <p>• 1 Doppelsteckdose</p>
+                <p>• 2 USB- Ansclüsse</p>
+                <p>• 2 Glaseinlegeboden</p>
+                <p>• Dimensionen: H 800mm x T 150mm x B 600 / 800mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/ss3.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/ss3.jpg">
+              </a>
+              <h2>Spiegelschrank 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Griff in Schwarz oder Weiß, Aufputz- oder Unterputzmontage</p>
+                <p>• 3 doppelt verspiegelte Türen</p>
+                <p>• Horizontale LED - LED-Beleuchtung, Lichttemperatur-Steuerung: Kalt- / Warmweiß, Lichtsteuerung innen 2.700 - 6.000K</p>
+                <p>• 1 Doppelsteckdose</p>
+                <p>• 2 USB- Ansclüsse</p>
+                <p>• 2 Glaseinlegeboden</p>
+                <p>• Dimensionen: H 800mm x T 150mm x B 1.200 / 1.400mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/ss4.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/ss4.jpg">
+              </a>
+              <h2>Spiegelschrank 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Griff in Schwarz oder Weiß, Aufputz- oder Unterputzmontage</p>
+                <p>• 4 doppelt verspiegelte Türen</p>
+                <p>• Horizontale LED - LED-Beleuchtung, Lichttemperatur-Steuerung: Kalt- / Warmweiß, Lichtsteuerung innen 2.700 - 6.000K</p>
+                <p>• 1 Doppelsteckdose</p>
+                <p>• 2 USB- Ansclüsse</p>
+                <p>• 4 Glaseinlegeboden</p>
+                <p>• Dimensionen: H 800mm x T 150mm x B 1.600mm</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/ss5.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/ss5.jpg">
+              </a>
+              <h2>Spiegelschrank 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• 2 verspiegelte Koffertüren</p>
+                <p>• Korpus außen: verspiegelt</p>
+                <p>• Korpus innen: Eiche Hell, Grau</p>
+                <p>• Griffe: Schwarz matt</p>
+                <p>• Aufputzmogtage</p>
+                <p>• Horizontale LED - LED-Beleuchtung, Lichttemperatur-Steuerung: Kalt- / Warmweiß, Lichtsteuerung innen 2.700 - 6.000K</p>
+                <p>• 1 Doppelsteckdose</p>
+                <p>• 2 USB- Ansclüsse</p>
+                <p>• 2 Holzeinlegeböden</p>
+                <p>• 6 Einlegeboden mit Reling</p>
+                <p>• Dimensionen: H 800mm x T 160mm x B 800m</p>
+              </div>
+            </div>
+            <div class="imageSpiegelsch">
+              <a href="Pictures/PicturesB/White/Spiegelschraenke/s.jpg">
+                <img class="imagespiegelsch" src="Pictures/PicturesB/White/Spiegelschraenke/s.jpg">
+              </a>
+              <h2>Spiegel</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Rund mit 5-fach Vergrößerungsspiegel</p>
+                <p>• Indirekte LED - Beleuchtung, dimmbar 2.700 - 6.000 K</p>
+                <p>• Vergrößerungsspiegel beweglich</p>
+                <p>• Farben: Schwarzmatt / Weiß matt</p>
+                <p>• Dimensionen: H 600 / 800 / 1.200mm x T 50mm x B 600 / 800 / 1.000mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="seitensch" id="seitensch">
+            <h1>seitenschränke</h1>
+            <div class="imageSeitesch">
+              <h2>Seitenschrank 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Schublade 45° Gehrung ohne Abdeckplatte</p> 
+                <p>• Dimensionen: H 120mm x T 480mm x B 600 / 800 / 1.200mm</p> 
+              </div>
+              <div class="imageSeitesch">
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss11.jpg" target="_blank">
+                  <img class="imageseitensch" src="Pictures/PicturesB/White/Seitenschränke/ss11.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss12.jpg" target="_blank">
+                  <img class="imageseitensch2" src="Pictures/PicturesB/White/Seitenschränke/ss12.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss13.jpg" target="_blank">
+                  <img class="imageseitensch3" src="Pictures/PicturesB/White/Seitenschränke/ss13.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imageSeitesch">
+              <h2>Seitenschrank 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit Schublade 45° Gehrung ohne Abdeckplatte</p> 
+                <p>• Dimensionen: H 280mm x T 480mm x B 600 / 800 / 1.200mm</p> 
+              </div>
+              <div class="imageSeitesch">
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss21.jpg" target="_blank">
+                  <img class="imageseitensch" src="Pictures/PicturesB/White/Seitenschränke/ss21.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss22.jpg" target="_blank">
+                  <img class="imageseitensch2" src="Pictures/PicturesB/White/Seitenschränke/ss22.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss23.jpg" target="_blank">
+                  <img class="imageseitensch3" src="Pictures/PicturesB/White/Seitenschränke/ss23.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="imageSeitesch">
+              <h2>Seitenschrank 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Mit 2 Schubladen 45° Gehrung ohne Abdeckplatte</p> 
+                <p>• Dimensionen: H 400mm x T 480mm x B 600 / 800 / 1.200mm</p> 
+              </div>
+              <div class="imageSeitesch">
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss31.jpg" target="_blank">
+                  <img class="imageseitensch" src="Pictures/PicturesB/White/Seitenschränke/ss31.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss32.jpg" target="_blank">
+                  <img class="imageseitensch2" src="Pictures/PicturesB/White/Seitenschränke/ss32.jpg">
+                </a>
+                <a href="Pictures/PicturesB/White/Seitenschränke/ss33.jpg" target="_blank">
+                  <img class="imageseitensch3" src="Pictures/PicturesB/White/Seitenschränke/ss33.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtuint" id="wtuint">
+            <h1>waschtischunterschränke für integrierten waschtisch</h1>
+            <div class="imageWtuint">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int1.jpg">
+                <img class="imagewtuint" src="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int1.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Schublade</p>
+                <p>• für integrierten Waschtisch</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 500mm</p> 
+                <p>• Passend zu:
+                  <a href="#wt20" target="_blank">
+                    <h6>WT 20</h6>
+                  </a>
+                  <a href="#wt21" target="_blank">
+                    <h6>WT 21</h6>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="imageWtuint">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int2.jpg">
+                <img class="imagewtuint" src="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int2.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Tür</p>
+                <p>• für integrierten Waschtisch</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 500mm</p> 
+                <p>• Passend zu:
+                  <a href="#wt20" target="_blank">
+                    <h6>WT 20</h6>
+                  </a>
+                  <a href="#wt21" target="_blank">
+                    <h6>WT 21</h6>
+                  </a>
+                </p>
+              </div> 
+            </div>
+            <div class="imageWtuint">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int3.jpg">
+                <img class="imagewtuint" src="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int3.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Schublade</p>
+                <p>• für integrierten Waschtisch</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 600mm</p> 
+                <p>• Passend zu:
+                  <a href="#wt1" target="_blank">
+                    <h6>WT 1</h6>
+                  </a>
+                  <a href="#wt3" target="_blank">
+                    <h6>WT 3</h6>
+                  </a>
+                  <a href="#wt5" target="_blank">
+                    <h6>WT 5</h6>
+                  </a>
+                  <a href="#wt6" target="_blank">
+                    <h6>WT 6</h6>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="imageWtuint">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int4.jpg">
+                <img class="imagewtuint" src="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int4.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Schublade</p>
+                <p>• für integrierten Waschtisch</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 800mm</p> 
+                <p>• Passend zu:
+                  <a href="#wt1" target="_blank">
+                    <h6>WT 1</h6>
+                  </a>
+                  <a href="#wt3" target="_blank">
+                    <h6>WT 3</h6>
+                  </a>
+                  <a href="#wt5" target="_blank">
+                    <h6>WT 5</h6>
+                  </a>
+                  <a href="#wt6" target="_blank">
+                    <h6>WT 6</h6>
+                  </a>
+                  <a href="#wt10" target="_blank">
+                    <h6>WT 10</h6>
+                  </a>
+                  <a href="#wt11" target="_blank">
+                    <h6>WT 11</h6>
+                  </a>
+                  <a href="#wt12" target="_blank">
+                    <h6>WT 12</h6>
+                  </a>
+                  <a href="#wt13" target="_blank">
+                    <h6>WT 13</h6>
+                  </a>
+                  <a href="#wt14" target="_blank">
+                    <h6>WT 14</h6>
+                  </a>
+                  <a href="#wt15" target="_blank">
+                    <h6>WT 15</h6>
+                  </a>
+                  <a href="#wt16" target="_blank">
+                    <h6>WT 16</h6>
+                  </a>
+                  <a href="#wt17" target="_blank">
+                    <h6>WT 17</h6>
+                  </a>
+                  <a href="#wt18" target="_blank">
+                    <h6>WT 18</h6>
+                  </a>
+                  <a href="#wt19" target="_blank">
+                    <h6>WT 19</h6>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="imageWtuint">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int5.jpg">
+                <img class="imagewtuint" src="Pictures/PicturesB/White/Waschtischunterschraenkeintegriert/int5.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Schublade</p>
+                <p>• für integrierten Waschtisch</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 600mm</p> 
+                <p>• Passend zu:
+                  <a href="#wt2" target="_blank">
+                    <h6>WT 2</h6>
+                  </a>
+                  <a href="#wt4" target="_blank">
+                    <h6>WT 4</h6>
+                  </a>
+                  <a href="#wt7" target="_blank">
+                    <h6>WT 7</h6>
+                  </a>
+                  <a href="#wt8" target="_blank">
+                    <h6>WT 8</h6>
+                  </a>
+                  <a href="#wt9" target="_blank">
+                    <h6>WT 9</h6>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtschohne" id="wtschohne">
+            <h1>waschtischunterschränke ohne Abdeckplatte für Aufsatzschalen</h1>
+            <div class="imageWtschohne">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o1.jpg">
+                <img class="imagewtschohne" src="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o1.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 1</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• für Aufsatzschalen</p>
+                <p>• mit 45° Gehrung</p>
+                <p>• mit Schublade</p>
+                <p>• ohne Abdeckplatte</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 500mm</p> 
+              </div>
+            </div>
+            <div class="imageWtschohne">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o2.jpg">
+                <img class="imagewtschohne" src="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o2.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 2</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• für Aufsatzschalen</p>
+                <p>• mit Tür</p>
+                <p>• ohne Abdeckplatte</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 500mm</p> 
+              </div>
+            </div>
+            <div class="imageWtschohne">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o3.jpg">
+                <img class="imagewtschohne" src="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o3.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 3</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• für Aufsatzschalen</p>
+                <p>• mit 45° Gehrung</p>
+                <p>• mit Schublade</p>
+                <p>• ohne Abdeckplatte</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 600mm</p> 
+              </div>
+            </div>
+            <div class="imageWtschohne">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o4.jpg">
+                <img class="imagewtschohne2" src="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o4.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 4</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• für Aufsatzschalen</p>
+                <p>• mit 45° Gehrung</p>
+                <p>• mit Schublade</p>
+                <p>• ohne Abdeckplatte</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 800mm</p> 
+              </div>
+            </div>
+            <div class="imageWtschohne">
+              <a href="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o5.jpg">
+                <img class="imagewtschohne3" src="Pictures/PicturesB/White/Waschtischunterschraenkeohne/o5.jpg">
+              </a>
+              <h2>Waschtischuntereschrank 5</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• für Aufsatzschalen</p>
+                <p>• mit 45° Gehrung</p>
+                <p>• mit Schublade</p>
+                <p>• ohne Abdeckplatte</p>
+                <p>• Dimensionen: H 280mm x T 380mm x B 1.200mm</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="zubehoer" id="zubehoer">
+            <h1>zubehör</h1>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z1.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z1.jpg">
+              </a>
+              <h2>Wellenboden</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Farbe: Anthrazit</p>
+                <p>• Dimensionen: H 420mm x T 6mm x B 270mm</p>
+                <p>• Dimensionen: H 520 / 720 / 1.120mm x T 6mm x B 370mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z2.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z2.jpg">
+              </a>
+              <h2>Raumsparsiphon</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Dimensionen: H 650mm x T 331mm x B 40mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z3.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z3.jpg">
+              </a>
+              <h2>Sockel</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Farbe: Schwarz matt</p>
+                <p>• Dimensionen: H 340 / 740 / 1.140 / 1.540 / 1.940mm x T 20mm x B 250mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z4.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z4.jpg">
+              </a>
+              <h2>Abdeckrahmen für Spiegelschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Farbe: Weiß matt oder Schwarz matt</p>
+                <p>• Dimensionen: H 432 / 632 / 832 / 1.232 / 1.432 / 1.632mm x T 832mm x B 9mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z5.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z5.jpg">
+              </a>
+              <h2>Einbauahmen Unterputz für Spiegelschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Dimensionen: H 437 / 637 / 837 / 1.237 / 1.437 / 1.637mm x T 838mm x B 127mm</p>
+              </div>
+            </div>
+            <div class="imageZubehoer">
+              <a href="Pictures/PicturesB/White/Zubehoer/z5.jpg">
+                <img class="imagezubehoer" src="Pictures/PicturesB/White/Zubehoer/z5.jpg">
+              </a>
+              <h2>Einbauahmen Halbeinbau für Spiegelschrank</h2>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• Dimensionen: H 437 / 637 / 837 / 1.237 / 1.437 / 1.637mm x T 838mm x B 70mm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <div class="wtsch" id="wtsch">
+            <h1>waschtische aus Mineralerkstoff</h1>
+            <div class="imageWtsch">
+              <h2 id="wt1">Waschtisch 1 (WT 1)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w1.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w1.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 600 / 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt2">Waschtisch 2 (WT 2)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w2.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w2.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 1.200mm x T 480mm</p>
+              </div> 
+            </div> 
+            <div class="imageWtsch">
+              <h2 id="wt3">Waschtisch 3 (WT 3)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w3.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w3.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 600 / 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt4">Waschtisch 4 (WT 4)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w4.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w4.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 1.200mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt5">Waschtisch 5 (WT 5)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w5.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w5.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 600 / 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt6">Waschtisch 6 (WT 6)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w6.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w6.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 600 / 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt7">Waschtisch 7 (WT 7)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w7.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w7.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 1.200mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt8">Waschtisch 8 (WT 8)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w8.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w8.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit 2 Hahnlöchen, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 1.200mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt9">Waschtisch 9 (WT 9)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w9.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w9.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 1.200mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt10">Waschtisch asymmetrisch, Ablage rechts(WT 10)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w10.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w10.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch hinten, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt11">Waschtisch asymmetrisch, Ablage rechts(WT 11)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w11.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w11.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch rechts, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt12">Waschtisch asymmetrisch, Ablage rechts(WT 12)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w12.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w12.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt13">Waschtisch asymmetrisch, Ablage rechts (WT 13)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w13.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w13.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen hinten für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt14">Waschtisch asymmetrisch, Ablage rechts (WT 14)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w14.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w14.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen rechts für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt15">Waschtisch asymmetrisch, Ablage links (WT 15)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w15.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w15.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch hinten, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt16">Waschtisch asymmetrisch, Ablage links (WT 16)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w16.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w16.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen links, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt17">Waschtisch asymmetrisch, Ablage links (WT 17)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w17.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w17.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnlöchen, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt18">Waschtisch asymmetrisch, Ablage links (WT 18)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w18.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w18.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnlöchen hinten für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt19">Waschtisch asymmetrisch, Ablage links (WT 19)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w19.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w19.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch links für 2-Loch-Batterie, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 800mm x T 480mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt20">Handwaschbecken (WT 20)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w20.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w20.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 500mm x T 380mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt21">Handwaschbecken (WT 21)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w21.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w21.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 500mm x T 380mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt22">Aufsatzschale rund (WT 22)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w22.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w22.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• mit Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 380 / 450mm x T 380 / 450mm</p>
+              </div> 
+            </div>
+            <div class="imageWtsch">
+              <h2 id="wt23">Aufsatzschale oval (WT 23)</h2>
+              <a href="Pictures/PicturesB/White/Waschtisch/w23.jpg">
+                <img class="imagewtsch" src="Pictures/PicturesB/White/Waschtisch/w23.jpg">
+              </a>
+              <div class="mehrInfo">
+                <button>
+                  info
+                </button>
+              </div>
+              <div class="hiddenInfo">
+                <p>• ohne Hahnloch, Permanentablaufventil und Ablaufabdeckung</p>
+                <p>• Farbe: Weiß / Weiß matt / Beton</p>
+                <p>• Dimensionen: B 580mm x T 380mm</p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div class="footerlogo">
+        <img class="footerimg" src="Pictures/Logo.jpg">
+      </div>
+      <div class="footerlogo">
+        <a href="https://g.co/kgs/Lsmvuj2" target="_blank">
+          <img class="footerimg" src="Pictures/Maps.jpg">
+        </a>
+      </div>
+        <h2>DIE PERLE MODERNE BADGESTALTUNG</h2>
+        <h4>Brockmannstraße 1</h4>
+        <h4>63075, Offenbach am Main</h4>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const infoButtons = document.querySelectorAll('.mehrInfo button');
+        const hiddenInfoElements = document.querySelectorAll('.hiddenInfo');
+    
+        // Function to close all hiddenInfo divs
+        function closeAllHiddenInfo() {
+          hiddenInfoElements.forEach(hiddenInfo => {
+            hiddenInfo.style.display = 'none';
+          });
+        }
+    
+        // Toggle hiddenInfo display on button click
+        infoButtons.forEach(button => {
+          button.addEventListener('click', function (event) {
+            // Prevent the click event from propagating to the document
+            event.stopPropagation();
+    
+            const hiddenInfo = button.closest('.mehrInfo').nextElementSibling;
+            if (hiddenInfo && hiddenInfo.classList.contains('hiddenInfo')) {
+              if (hiddenInfo.style.display === 'block') {
+                hiddenInfo.style.display = 'none'; // Hide if already visible
+              } else {
+                closeAllHiddenInfo(); // Close all other .hiddenInfo divs
+                hiddenInfo.style.display = 'block'; // Show if hidden
+              }
+            }
+          });
+        });
+    
+        // Close hiddenInfo divs when clicking anywhere on the page
+        document.addEventListener('click', function () {
+          closeAllHiddenInfo();
+        });
+      });
+    </script>
+
+  </body>
+</html>
